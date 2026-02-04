@@ -148,7 +148,7 @@ export default function Services() {
               link: "/services/custom-software",
             },
           ].map((service, i) => (
-        
+        <Link to={service.link} key={i} className="no-underline">
             <motion.div
               key={i}
               variants={card}
@@ -192,15 +192,15 @@ export default function Services() {
   transition={{ type: "spring", stiffness: 300 }}
   className="mt-6 text-center"
 >
-  <Link
-    to={service.link}
+  <h3
+   
     className="inline-flex items-center gap-2
     text-[#ff5252] font-extrabold text-[15px]
     hover:text-[#22FF88] transition-colors"
   >
     View Details
     <span className="text-lg">→</span>
-  </Link>
+  </h3>
 </motion.div>
 
 
@@ -209,7 +209,7 @@ export default function Services() {
 
 
 
-
+        </Link>
           ))}
         </motion.div> 
       </div>

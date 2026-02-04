@@ -3,7 +3,7 @@ import webHero from "../../assets/web.png";
 import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
 
-
+import { Link } from "react-router-dom";
 
 
 
@@ -222,7 +222,7 @@ export default function WebDevelopment() {
       {[
         { title: "Requirement Analysis", color: "from-cyan-100 to-sky-200" },
         { title: "UI/UX Design", color: "from-pink-100 to-rose-200" },
-        { title: "Development", color: "from-emerald-100 to-green-200" },
+        { title: " Website Development", color: "from-emerald-100 to-green-200" },
         { title: "Testing & Optimization", color: "from-amber-100 to-yellow-200" },
         { title: "Launch & Support", color: "from-indigo-100 to-blue-200" },
       ].map((step, i) => (
@@ -281,11 +281,13 @@ export default function WebDevelopment() {
     className="flex flex-wrap justify-center gap-6 md:gap-8"
   >
     {[
-      { name: "Mobile App Development", color: "from-cyan-100 to-sky-200" },
-      { name: "AI Automation", color: "from-pink-100 to-rose-200" },
-      { name: "E-Commerce Solutions", color: "from-emerald-100 to-green-200" },
-      { name: "Business Dashboards", color: "from-indigo-100 to-blue-200" },
+      { name: "Mobile App Development", color: "from-cyan-100 to-sky-200",link:"/services/mobile-app" },
+      { name: "AI Automation", color: "from-pink-100 to-rose-200",link:"/services/ai-automation" },
+      { name: "E-Commerce Solutions", color: "from-emerald-100 to-green-200",link:"/services/ecommerce" },
+      { name: "Custom Business Software", color: "from-indigo-100 to-blue-200",link:"/services/custom-software" },
+      { name: "Business Dashboard", color: "from-violet-100 to-purple-200",link:"/services/dashboard" },
     ].map((service, i) => (
+      <Link to={service.link} key={i} >
       <motion.div
         key={i}
         variants={{
@@ -321,7 +323,24 @@ export default function WebDevelopment() {
         `}
       >
         {service.name}
+
+         <motion.div
+  whileHover={{ x: 6 }}
+  transition={{ type: "spring", stiffness: 300 }}
+  className="mt-6 text-center"
+>
+  <h3
+   
+    className="inline-flex items-center gap-2
+    text-[#ff5252] font-extrabold text-[15px]
+    hover:text-[#22FF88] transition-colors"
+  >
+    View Details
+    <span className="text-lg">→</span>
+  </h3>
+</motion.div>
       </motion.div>
+      </Link>
     ))}
   </motion.div>
 </section>
