@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import hero from "../assets/hero.png";
 import Services from "../components/Services";
-
+import About from "./About";
 /* Dummy images */
 const heroImg = hero
 const webImg = "https://illustrations.popsy.co/white/web-design.svg";
@@ -75,7 +75,18 @@ export default function Home() {
         </div>
       </section>
 
+
+ {/* ================= About ================= */}
+
+<section>
+
+  <About/>
+</section>
+
+
       {/* ================= SERVICES ================= */}
+
+
 
       <section>
         <Services/>
@@ -90,10 +101,10 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              ["1. Understand", "We deeply understand your business goals", "from-[#E6FFF5] to-[#C8FDEA]"],
-              ["2. Plan", "We plan architecture & user journey", "from-[#ECFEFF] to-[#C7F5FF]"],
-              ["3. Build", "We develop scalable & clean systems", "from-[#EEF2FF] to-[#DDE5FF]"],
-              ["4. Launch & Support", "We launch, monitor & improve continuously", "from-[#FFF7ED] to-[#FFE4C7]"],
+              ["1. Understand", "We deeply understand your business goals", "from-[#00E5CC]/40 to-[#3B82F6]/40"],
+              ["2. Plan", "We plan architecture & user journey", "from-[#22FF88]/40 to-[#00E5CC]/40"],
+              ["3. Build", "We develop scalable & clean systems", "from-violet-300/50 to-purple-500/50"],
+              ["4. Launch & Support", "We launch, monitor & improve continuously", "from-pink-300/50 to-rose-500/50"],
             ].map(([title, desc, bg], i) => (
               <motion.div
                 key={i}
@@ -105,8 +116,8 @@ export default function Home() {
                 className={`p-6 rounded-2xl bg-gradient-to-br ${bg}
                 shadow-lg hover:shadow-xl`}
               >
-                <h4 className="font-semibold text-lg mb-2">{title}</h4>
-                <p className="text-sm text-gray-700">{desc}</p>
+                <h3 className="font-semibold text-lg mb-2">{title}</h3>
+                <p className="text-md text-gray-700 font-semibold">{desc}</p>
               </motion.div>
             ))}
           </div>

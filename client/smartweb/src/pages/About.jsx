@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
-
+import about from "../assets/about.png"
+import commitment from "../assets/commitment.png"
+import transparency from "../assets/transperncy.png"
+import innovation from "../assets/inovation.png"
+import quality from "../assets/quality.png"
 /* ================= PNGs ================= */
 const aboutImg = "https://illustrations.popsy.co/white/team-work.svg";
 const valueImg = "https://illustrations.popsy.co/white/values.svg";
@@ -43,19 +47,19 @@ export default function About() {
               <span className="text-[#3B82F6]">AI</span>
             </h1>
 
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-900">
               We are a modern digital technology company building scalable,
               high-impact web, app and AI solutions.
             </p>
 
-            <p className="text-gray-600">
+            <p className="text-gray-900">
               Our goal is simple — reduce complexity, automate processes
               and help businesses grow faster.
             </p>
           </motion.div>
 
           <motion.img
-            src={aboutImg}
+            src={about}
             whileHover={{ scale: 1.08, rotate: 1 }}
             transition={{ type: "spring", stiffness: 200 }}
             className="max-w-md mx-auto"
@@ -79,12 +83,12 @@ export default function About() {
                 Who <span className="text-[#00E5CC]">We Are</span>
               </h2>
 
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-900 mb-4">
                 We are developers, designers and problem-solvers who believe
                 technology should feel simple, fast and powerful.
               </p>
 
-              <p className="text-gray-600">
+              <p className="text-gray-900">
                 We don’t just build software — we build long-term solutions.
               </p>
             </motion.div>
@@ -124,11 +128,32 @@ export default function About() {
             className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10"
           >
             {[
-              ["Transparency", "Clear communication & honest work.", "from-[#22FF88]/40 to-[#00E5CC]/40"],
-              ["Quality", "Clean code & scalable systems.", "from-[#00E5CC]/40 to-[#3B82F6]/40"],
-              ["Innovation", "Modern tools & AI-first mindset.", "from-[#3B82F6]/40 to-[#22FF88]/40"],
-              ["Commitment", "Long-term success focus.", "from-[#EEF2FF] to-[#ECFEFF]"]
-            ].map(([title, desc, bg], i) => (
+               [
+    "Transparency",
+    "Clear communication & honest work.",
+    "from-[#22FF88]/40 to-[#00E5CC]/40",
+    transparency
+  ],
+  [
+    "Quality",
+    "Clean code & scalable systems.",
+    "from-[#00E5CC]/40 to-[#3B82F6]/40",
+    quality
+  ],
+  [
+    "Innovation",
+    "Modern tools & AI-first mindset.",
+    "from-violet-300/50 to-purple-500/50",
+    innovation
+  ],
+  
+  [
+    "Commitment",
+    "Long-term success focus.",
+    "from-pink-300/50 to-rose-500/50",
+    commitment
+  ]
+            ].map(([title, desc, bg, icon], i) => (
               <motion.div
                 key={i}
                 variants={item}
@@ -138,13 +163,13 @@ export default function About() {
               >
                 {/* SMALL PNG ICON */}
                 <img
-                  src={valueImg}
-                  className="h-12 mb-4"
+                  src={icon}
+                  className="h-[105px] mb-4 ml-[24px]"
                   alt="value-icon"
                 />
 
                 <h4 className="text-xl font-bold mb-3">{title}</h4>
-                <p className="text-gray-700 text-sm">{desc}</p>
+                <p className="text-gray-900 text-md">{desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -153,6 +178,7 @@ export default function About() {
       </section>
 
       {/* ================= STATS ================= */}
+     
       <section className="py-36 bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6]">
         <div className="px-6 md:px-12 lg:px-28 max-w-7xl mx-auto">
 
@@ -182,8 +208,7 @@ export default function About() {
 
         </div>
       </section>
-
-      {/* ================= CTA ================= */}
+ {/*
       <section className="py-32 bg-[#0F172A] text-center">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -206,7 +231,7 @@ export default function About() {
         >
           Contact Us
         </motion.button>
-      </section>
+      </section>  */}
 
     </main>
   );
