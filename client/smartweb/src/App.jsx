@@ -11,6 +11,8 @@ import CustomBusiness from "./pages/subpages/CustomBusiness";
 import ScrollToTop from "./components/ScrollTop";
 import { Routes, Route } from "react-router-dom";
 import Clients from "./components/Clients";
+import Project from "./components/Project";
+
 function App() {
   return (
     <>
@@ -36,6 +38,7 @@ function App() {
             element={<CustomBusiness />}
           />
           <Route path="/clients" element={<Clients />} />
+          <Route path="/projects" element={<Project />} />
         </Routes>
       </div>
     </>
