@@ -179,35 +179,7 @@ export default function About() {
 
       {/* ================= STATS ================= */}
      
-      <section className="py-36 bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6]">
-        <div className="px-6 md:px-12 lg:px-28 max-w-7xl mx-auto">
-
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-12 text-white text-center"
-          >
-            {[
-              ["50+", "Projects"],
-              ["30+", "Clients"],
-              ["5+", "Industries"],
-              ["24/7", "Support"]
-            ].map(([num, label], i) => (
-              <motion.div
-                key={i}
-                variants={item}
-                whileHover={{ scale: 1.18, y: -8 }}
-              >
-                <h3 className="text-5xl font-extrabold">{num}</h3>
-                <p className="mt-2 text-white/90">{label}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-
-        </div>
-      </section>
+    
  {/*
       <section className="py-32 bg-[#0F172A] text-center">
         <motion.h2
