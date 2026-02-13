@@ -12,10 +12,12 @@ import ScrollToTop from "./components/ScrollTop";
 import { Routes, Route } from "react-router-dom";
 import Clients from "./components/Clients";
 import Contact from "./components/Contact";
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
       <div>
+        <Toaster position="top-right" reverseOrder={false} />
         <Navbar />
         <Contact/>
 

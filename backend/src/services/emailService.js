@@ -1,5 +1,7 @@
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
 
+dotenv.config();
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -10,9 +12,11 @@ const transporter = nodemailer.createTransport({
 
 export const sendEmails = async (data) => {
   const receivers = process.env.EMAIL_RECEIVERS.split(",");
+  console.log('EMAIL_USER:', process.env.EMAIL_USER );
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS );
 
   const html = `
-    <h2>New Contact Message</h2>
+    <h2>New  Client Contact Message from SmartwebAI</h2>
     <p><b>Name:</b> ${data.fullName}</p>
     <p><b>Email:</b> ${data.email}</p>
     <p><b>Phone:</b> ${data.phone}</p>

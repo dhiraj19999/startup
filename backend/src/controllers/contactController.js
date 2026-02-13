@@ -4,17 +4,32 @@ import { sendEmails } from "../services/emailService.js";
 
 export const sendContact = async (req, res) => {
   try {
-    const { fullName, email, phone, subject, message } = req.body;
+    const { fullName, email, phone, message } = req.body;
 
     if (!fullName || !email || !phone || !message) {
       return res.status(400).json({ success: false, message: "All fields required" });
     }
 
-    // save in DB
-    await Contact.create({ fullName, email, phone, subject, message });
+    let contact = await Contact.findOne({ email });
+
+    if (contact) {
+     
+      contact.messages.push({ text: message });
+      await contact.save();
+    } else {
+      // 🆕 Create new contact with first message
+      contact = await Contact.create({
+        fullName,
+        email,
+        phone,
+        messages: [{ text: message }],
+      });
+    }
+
+
 
     // send notifications
-    await sendEmails(req.body);
+   await sendEmails(req.body);
   
 
     res.json({ success: true, message: "Message sent successfully" });
