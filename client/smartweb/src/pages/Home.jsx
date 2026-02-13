@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import hero from "../assets/hero.png";
 import Services from "../components/Services";
 import About from "./About";
+import Clients from "../components/Clients";
 /* Dummy images */
 const heroImg = hero
 const webImg = "https://illustrations.popsy.co/white/web-design.svg";
@@ -83,16 +84,7 @@ export default function Home() {
   <About/>
 </section>
 
-
-      {/* ================= SERVICES ================= */}
-
-
-
-      <section>
-        <Services/>
-      </section>
-      
-      {/* ================= HOW WE WORK ================= */}
+    {/* ================= HOW WE WORK ================= */}
       <section className="w-full py-32 bg-gradient-to-br from-[#F0FFF9] to-[#ECFEFF]">
         <div className="w-full px-6 md:px-12 lg:px-28">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
@@ -124,6 +116,21 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* ================= SERVICES ================= */}
+
+
+
+      <section>
+        <Services/>
+      </section>
+
+{/* ================= Clients ================= */}
+<section>
+  <Clients/>
+</section>
+      
+  
       {/* ================= CTA ================= */}
       <section className="w-full py-32 bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6] text-center">
         <motion.h2

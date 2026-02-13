@@ -11,13 +11,16 @@ import CustomBusiness from "./pages/subpages/CustomBusiness";
 import ScrollToTop from "./components/ScrollTop";
 import { Routes, Route } from "react-router-dom";
 import Clients from "./components/Clients";
+
 import Project from "./components/Project";
 
+import Contact from "./components/Contact";
 function App() {
   return (
     <>
       <div>
         <Navbar />
+        <Contact />
 
         <Routes>
           <Route path="/" element={<Home />} />

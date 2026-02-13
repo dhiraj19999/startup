@@ -168,7 +168,7 @@ export default function Ecommerce() {
 
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
       {[
-        { text: "User-friendly product managemen", color: "from-cyan-100 to-cyan-200" },
+        { text: "User-friendly product management", color: "from-cyan-100 to-cyan-200" },
         { text: "Secure payment gateway integration", color: "from-green-100 to-emerald-200" },
         { text: "Fast & optimized shopping experience", color: "from-yellow-100 to-amber-200" },
         { text: "Order tracking & management", color: "from-indigo-100 to-blue-200" },
