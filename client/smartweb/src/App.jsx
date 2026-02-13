@@ -15,10 +15,12 @@ import Clients from "./components/Clients";
 import Project from "./components/Project";
 
 import Contact from "./components/Contact";
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
       <div>
+        <Toaster position="top-right" reverseOrder={false} />
         <Navbar />
         <Contact />
 
