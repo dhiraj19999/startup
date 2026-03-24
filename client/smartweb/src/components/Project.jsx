@@ -1,119 +1,101 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const projects = [
   {
-    title: "E-Commerce Website",
-    description:
-      "A fast, scalable e-commerce platform with secure payments and admin dashboard.",
-    tech: ["React", "Node.js", "MongoDB"],
-    category: "Web Development",
+    name: "E-Commerce Website",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
+    link: "https://example.com",
   },
   {
-    title: "Business Portfolio",
-    description:
-      "Modern portfolio website for startups to showcase services and projects.",
-    tech: ["React", "Tailwind CSS"],
-    category: "Website",
+    name: "Business Portfolio",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    link: "https://example.com",
   },
   {
-    title: "Mobile App UI",
-    description:
-      "User-friendly mobile app interface designed for high engagement.",
-    tech: ["React Native", "Firebase"],
-    category: "Mobile App",
+    name: "AI Chatbot",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+    link: "https://example.com",
   },
   {
-    title: "AI Chatbot",
-    description:
-      "AI-powered chatbot for customer support and lead generation.",
-    tech: ["OpenAI", "Node.js", "Express"],
-    category: "AI Automation",
-  },
-  {
-    title: "CRM System",
-    description:
-      "Custom CRM to manage clients, sales pipeline, and reports.",
-    tech: ["React", "Node.js", "PostgreSQL"],
-    category: "Software",
-  },
-  {
-    title: "Landing Page",
-    description:
-      "High-conversion landing page optimized for speed and SEO.",
-    tech: ["HTML", "Tailwind", "JavaScript"],
-    category: "Marketing",
+    name: "CRM System",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    link: "https://example.com",
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="bg-gradient-to-br from-emerald-50 to-blue-50 min-h-screen">
+    <div className="bg-gradient-to-br from-emerald-50 to-blue-50 min-h-screen py-20 px-6">
       
-      {/* Hero Section */}
-      <section className="text-center py-20 px-4">
+      {/* Title */}
+      <div className="text-center mb-16">
         <h1 className="text-5xl font-bold text-slate-900 mb-4">
           Our Projects
         </h1>
-        <p className="max-w-2xl mx-auto text-lg text-slate-600">
-          We build modern websites, apps, and AI solutions that help businesses
-          grow faster and smarter.
+        <p className="text-slate-600 text-lg">
+          Swipe or use arrows to explore our work
         </p>
-      </section>
+      </div>
 
-      {/* Projects Grid */}
-      <section className="max-w-7xl mx-auto px-6 pb-20">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Slider */}
+      <div className="max-w-6xl mx-auto">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg p-6 hover:-translate-y-2 transition-all duration-300"
-            >
-              <span className="inline-block mb-3 text-sm font-semibold text-emerald-500">
-                {project.category}
-              </span>
+            <SwiperSlide key={index}>
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-2 transition duration-300">
+                
+                {/* Image */}
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-56 object-cover"
+                />
 
-              <h3 className="text-xl font-bold text-slate-800 mb-2">
-                {project.title}
-              </h3>
+                {/* Content */}
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-bold text-slate-800 mb-4">
+                    {project.name}
+                  </h3>
 
-              <p className="text-slate-600 mb-4">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-700"
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-emerald-400 to-blue-500 text-white font-semibold hover:opacity-90 transition"
                   >
-                    {tech}
-                  </span>
-                ))}
+                    View Live
+                  </a>
+                </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="text-center py-20 bg-slate-900 text-white px-4">
-        <h2 className="text-4xl font-bold mb-4">
-          Want a Project Like This?
-        </h2>
-        <p className="max-w-xl mx-auto text-slate-300 mb-8">
-          Let’s build something amazing together. Tell us about your idea and
-          we’ll turn it into reality.
-        </p>
-
-        <div className="flex justify-center gap-6 flex-wrap">
-          <button className="px-8 py-3 rounded-full bg-gradient-to-r from-emerald-400 to-blue-500 font-semibold text-white hover:opacity-90 transition">
-            Get Free Quote
-          </button>
-          <button className="px-8 py-3 rounded-full border border-blue-500 text-blue-400 font-semibold hover:bg-blue-500 hover:text-white transition">
-            WhatsApp Us
-          </button>
-        </div>
-      </section>
+        </Swiper>
+      </div>
     </div>
   );
 };
