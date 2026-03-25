@@ -19,7 +19,7 @@ function App() {
       <div>
         <Toaster position="top-right" reverseOrder={false} />
         <Navbar />
-        <Contact/>
+        
 
         <Routes>
           <Route path="/" element={<Home />} />
