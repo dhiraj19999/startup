@@ -1,7 +1,7 @@
 
 
 import { motion } from "framer-motion";
-import ecommerceHero from "../../assets/e-commerce.png";
+import ecommerceHero from "../../assets/e-commerce.webp";
 import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
 import { Link } from "react-router-dom";

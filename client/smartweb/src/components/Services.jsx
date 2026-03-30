@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import app from "../assets/app.png";
-import web from "../assets/web.png";
-import ai from "../assets/ai.png";
-import ecom from "../assets/e-commerce.png";
-import dsahbord from "../assets/dashbord.png";
-import custom from "../assets/custom.png";
+import app from "../assets/app.webp";
+import web from "../assets/web.webp";
+import ai from "../assets/ai.webp";
+import ecom from "../assets/e-commerce.webp";
+import dsahbord from "../assets/dashbord.webp";
+import custom from "../assets/custom.webp";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import vfx from "../assets/vfx.png";

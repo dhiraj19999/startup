@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import softwareHero from "../../assets/custom.png";
+import softwareHero from "../../assets/custom.webp";
 import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
 import { Helmet } from "react-helmet-async";

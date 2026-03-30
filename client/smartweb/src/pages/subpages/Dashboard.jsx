@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import dashboardHero from "../../assets/dashbord.png";
+import dashboardHero from "../../assets/dashbord.webp";
 import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
 import { Helmet } from "react-helmet-async";

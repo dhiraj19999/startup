@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import webHero from "../../assets/web.png";
+import webHero from "../../assets/web.webp";
 import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
 

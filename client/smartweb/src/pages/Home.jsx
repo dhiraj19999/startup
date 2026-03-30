@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero.webp";
 import Services from "../components/Services";
 import About from "./About";
 import Clients from "../components/Clients";
