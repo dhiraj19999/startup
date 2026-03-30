@@ -3,6 +3,11 @@ import hero from "../assets/hero.png";
 import Services from "../components/Services";
 import About from "./About";
 import Clients from "../components/Clients";
+import Projects from "../components/Project";
+import { Helmet } from "react-helmet-async";
+import Contact from "../components/Contact";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 /* Dummy images */
 const heroImg = hero
 const webImg = "https://illustrations.popsy.co/white/web-design.svg";
@@ -15,12 +20,81 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
+
+
 export default function Home() {
+
+
+
+const handleWhatsApp = () => {
+  const phone = "918459116231"; // apna number
+
+  const message = `Hi SmartWeb AI 👋
+
+I’m interested in your web development services.
+
+
+Please share more details.`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
+const handleQuote = () => {
+  const phone = "918459116231";
+
+  const message = `Hi SmartWeb AI 👋
+
+I want to get a FREE quote for:
+
+Service: Web Development
+Please share pricing & details.`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
+const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const el = document.querySelector(location.hash);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+}, [location]);
+
   return (
     <main className="w-full overflow-x-hidden text-[#0F172A]">
 
+      <Helmet>
+<title>
+SmartWeb AI - Website Development Company in Pune, Latur, Ambejogai | India
+</title>
+
+<meta
+name="description"
+content="SmartWeb AI provides website development, mobile app development and AI automation services in Pune, Latur, Ambejogai and across India. We build SEO optimized business websites that generate leads and grow your business."
+/>
+
+<meta
+name="keywords"
+content="website developer Pune, website developer Latur,Mobile app developement , website developer Ambejogai, web development India, business website India, AI automation India, web design Maharashtra, ecommerce website India, SmartWeb AI"
+/>
+
+<meta name="robots" content="index, follow" />
+<meta name="author" content="SmartWeb AI" />
+
+<meta property="og:title" content="SmartWeb AI - Website Development & AI Automation" />
+<meta property="og:description" content="We build business websites, mobile apps and AI automation across India." />
+<meta property="og:type" content="website" />
+</Helmet>
+
       {/* ================= HERO ================= */}
-      <section className="w-full min-h-screen pt-32 bg-gradient-to-br from-[#E6FFF5] via-[#ECFEFF] to-[#EEF2FF]">
+      <section id="home" className="w-full min-h-screen pt-32 bg-gradient-to-br from-[#E6FFF5] via-[#ECFEFF] to-[#EEF2FF]">
         <div className="w-full px-6 md:px-12 lg:px-28 grid md:grid-cols-2 gap-16 items-center">
 
           <motion.div
@@ -38,31 +112,61 @@ export default function Home() {
             </h1>
 
             <p className="text-base md:text-lg text-gray-700 max-w-2xl">
-              We help startups and businesses build strong digital presence,
-              scalable products and intelligent automation systems that save time
-              and increase growth.
+             SmartWeb AI helps businesses create powerful digital presence with modern
+        websites, mobile apps and intelligent automation. We design fast, SEO
+        optimized solutions that attract customers, generate leads and increase
+        your business revenue.
             </p>
+
+ <div className="flex flex-wrap gap-3 text-sm font-semibold">
+        <span className="bg-white px-4 py-2 rounded-full shadow">
+          🚀 Lead Generating Websites
+        </span>
+        <span className="bg-white px-4 py-2 rounded-full shadow">
+          📱 Business Mobile Apps
+        </span>
+        <span className="bg-white px-4 py-2 rounded-full shadow">
+          🤖 AI Automation
+        </span>
+        <span className="bg-white px-4 py-2 rounded-full shadow">
+          📈 SEO Optimized Design
+        </span>
+         <span className="bg-white px-4 py-2 rounded-full shadow">
+    🎬 Video Editing
+  </span>
+
+  <span className="bg-white px-4 py-2 rounded-full shadow">
+    ✨ VFX & Motion Graphics
+  </span>
+        
+      </div>
 
             <div className="flex gap-4 flex-wrap">
               <motion.button
                 whileHover={{ scale: 1.08 }}
+                onClick={handleQuote}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="px-8 py-3 rounded-full bg-gradient-to-r from-[#22FF88] to-[#00E5CC]
                 font-semibold shadow-md"
               >
-                Get Free Quote
+                 Get Free Website Demo
               </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={handleWhatsApp}
                 className="px-8 py-3 rounded-full border-2 border-[#3B82F6]
                 text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition"
               >
                 WhatsApp Us
               </motion.button>
             </div>
+             <p className="text-sm text-gray-500">
+        Website Development • Web Design • Business Websites • AI Automation •
+        Landing Pages • E-commerce • Digital Growth
+      </p>
           </motion.div>
 
           <motion.img
@@ -79,80 +183,71 @@ export default function Home() {
 
  {/* ================= About ================= */}
 
-<section>
+<section id="about">
 
   <About/>
 </section>
 
     {/* ================= HOW WE WORK ================= */}
-      <section className="w-full py-32 bg-gradient-to-br from-[#F0FFF9] to-[#ECFEFF]">
-        <div className="w-full px-6 md:px-12 lg:px-28">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
-            How We <span className="text-[#00E5CC]">Work</span>
-          </h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              ["1. Understand", "We deeply understand your business goals", "from-[#00E5CC]/40 to-[#3B82F6]/40"],
-              ["2. Plan", "We plan architecture & user journey", "from-[#22FF88]/40 to-[#00E5CC]/40"],
-              ["3. Build", "We develop scalable & clean systems", "from-violet-300/50 to-purple-500/50"],
-              ["4. Launch & Support", "We launch, monitor & improve continuously", "from-pink-300/50 to-rose-500/50"],
-            ].map(([title, desc, bg], i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, rotate: 0.6 }}
-                transition={{ duration: 0.45 }}
-                className={`p-6 rounded-2xl bg-gradient-to-br ${bg}
-                shadow-lg hover:shadow-xl`}
-              >
-                <h3 className="font-semibold text-lg mb-2">{title}</h3>
-                <p className="text-md text-gray-700 font-semibold">{desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
 
       {/* ================= SERVICES ================= */}
 
 
 
-      <section>
+      <section id="services">
         <Services/>
       </section>
 
 {/* ================= Clients ================= */}
-<section>
+<section id="clients">
   <Clients/>
 </section>
       
-  
-      {/* ================= CTA ================= */}
-      <section className="w-full py-32 bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6] text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-extrabold text-white mb-6"
-        >
-          Let’s Build Something Powerful Together 🚀
-        </motion.h2>
+  {/* =======            Projects             ======== */}
+<search id="projects">  <Projects/></search>
+   
 
-        <motion.button
-          whileHover={{ scale: 1.12 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 260 }}
-          className="px-12 py-4 rounded-full bg-white
-          font-semibold text-lg shadow-xl"
-        >
-          Start Your Project
-        </motion.button>
+
+
+ <section className="py-28 text-center">
+        <h2 className="text-5xl font-extrabold mb-6">
+          Ready to Be Our Next Success Story?
+        </h2>
+
+         <div className="flex gap-4 flex-wrap justify-center items-center text-center mt-8">
+  <motion.button
+    whileHover={{ scale: 1.08 }}
+    onClick={handleQuote}
+    whileTap={{ scale: 0.95 }}
+    transition={{ type: "spring", stiffness: 300 }}
+    className="px-8 py-3 rounded-full bg-gradient-to-r from-[#22FF88] to-[#00E5CC]
+    font-semibold shadow-md"
+  >
+    Get Free Website Demo
+  </motion.button>
+
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={handleWhatsApp}
+    className="px-8 py-3 rounded-full border-2 border-[#3B82F6]
+    text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition"
+  >
+    WhatsApp Us
+  </motion.button>
+</div>
       </section>
 
+{/* === Contact  ==    */}
+
+<section id="contact"> <Contact/> </section>
+
+
+
+      {/* ================= CTA ================= */}
+    
     </main>
   );
 }

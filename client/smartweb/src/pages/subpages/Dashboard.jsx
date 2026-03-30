@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import dashboardHero from "../../assets/dashbord.png";
 import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
-
+import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
 
@@ -27,8 +27,48 @@ const stagger = {
 };
 
 export default function DashboardDevlopment() {
+
+  const handleWhatsApp = () => {
+  const phone = "918459116231"; // apna number
+
+  const message = `Hi SmartWeb AI 👋
+
+I’m interested in your dashboard development services.
+
+
+Please share more details.`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
+
   return (
     <main className="w-full overflow-x-hidden text-[#0F172A] text-base sm:text-[15px]">
+      <Helmet>
+<title>
+Business Dashboard Development | Analytics & Reporting Dashboards | SmartWeb AI
+</title>
+
+<meta
+name="description"
+content="SmartWeb AI provides business dashboard development including analytics dashboards, KPI tracking, reporting systems and real-time data visualization. Get insights to grow your business."
+/>
+
+<meta
+name="keywords"
+content="business dashboard development, analytics dashboard, KPI dashboard, reporting dashboard, admin dashboard, data visualization dashboard"
+/>
+
+<meta name="robots" content="index, follow" />
+
+<meta property="og:title" content="Business Dashboard Development | SmartWeb AI" />
+<meta
+property="og:description"
+content="Custom dashboards for analytics, KPI tracking and business insights."
+/>
+</Helmet>
 
       {/* ======================================================
          HERO
@@ -43,13 +83,14 @@ export default function DashboardDevlopment() {
             animate="visible"
           >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-              Business <span className="text-[#22FF88]">Dashboards</span>
+              Business Dashboards<span className="text-[#22FF88]"> Development Solutions</span>
             </h1>
 
             <p className="text-lg text-gray-900 max-w-xl">
               Looking for real-time insights into your business performance?
-              Our custom dashboards give you a clear, data-driven view of
-              your operations, sales, and growth — all in one place.
+              Our custom dashboards give you a real-time insights,
+analytics and performance tracking. Monitor sales, operations and
+business growth using powerful data-driven dashboards.
             </p>
           </motion.div>
 
@@ -81,16 +122,16 @@ export default function DashboardDevlopment() {
   whileInView="visible"
   className="text-base sm:text-lg text-gray-900 leading-relaxed"
 >
-   Business dashboards help you turn raw data into meaningful
-            insights that support faster and smarter decision-making.
-            <br /><br />
-            We build custom dashboards that present real-time metrics,
-            reports, and analytics in a clean, easy-to-understand format
-            tailored specifically to your business goals.
-            <br /><br />
-            From sales tracking to performance monitoring, our dashboards
-            eliminate guesswork and give you full visibility into what’s
-            working and where improvements are needed.
+   Business dashboards transform raw data into actionable insights that
+help you make smarter business decisions. We build custom dashboards
+designed to track performance, monitor KPIs and visualize key metrics.
+
+Our dashboards provide real-time analytics, reports and business
+intelligence in a clean and easy-to-understand interface. This helps
+teams identify opportunities, improve efficiency and drive growth.
+
+From sales dashboards to operational analytics, we create scalable
+solutions that give you full visibility into your business performance.
 </motion.p>
 
         </div>
@@ -108,12 +149,13 @@ export default function DashboardDevlopment() {
             </motion.h3>
 
             {[
-               "Business owners & decision-makers",
-              "Sales & marketing teams",
-              "Operations & management teams",
-              "Startups tracking growth metrics",
-              "Enterprises needing analytics dashboards",
-            ].map((item, i) => (
+"Business owners needing performance insights",
+"Sales & marketing teams tracking revenue",
+"Operations teams monitoring workflows",
+"Startups tracking growth metrics",
+"Companies requiring analytics dashboards",
+"Management teams making data-driven decisions",
+].map((item, i) => (
               <motion.p key={i} variants={fadeUp}
                 className="text-gray-700 font-medium mb-3">
                 ✔ {item}
@@ -128,11 +170,11 @@ export default function DashboardDevlopment() {
 
             <motion.ul variants={fadeUp}
               className="space-y-4 text-gray-700 font-medium">
-               <li>• Sales & revenue dashboards</li>
-              <li>• Team performance monitoring</li>
-              <li>• Customer behavior analytics</li>
-              <li>• Operational & KPI tracking</li>
-              <li>• Management reporting systems</li>
+               <li>• Sales & revenue tracking dashboards</li>
+              <li>• KPI and performance monitoring dashboards</li>
+              <li>• Customer analytics dashboards</li>
+              <li>• Operations & business intelligence dashboards</li>
+              <li>• Management reporting dashboards</li>
             </motion.ul>
           </motion.div>
         </div>
@@ -165,11 +207,11 @@ export default function DashboardDevlopment() {
 
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
       {[
-        { text: "Real-time data visualization", color: "from-cyan-100 to-cyan-200" },
-  { text: "Custom KPIs & metrics", color: "from-green-100 to-emerald-200" },
-  { text: "Role-based access control", color: "from-yellow-100 to-amber-200" },
-  { text: "Interactive charts & reports", color: "from-indigo-100 to-blue-200" },
-  { text: "Secure data integration", color: "from-pink-100 to-rose-200" },
+        { text: "Real-time business data visualization", color: "from-cyan-100 to-cyan-200" },
+  { text: "Custom KPIs and performance metrics", color: "from-green-100 to-emerald-200" },
+  { text: "Secure Role-based access control", color: "from-yellow-100 to-amber-200" },
+  { text: "Integration with APIs and databases", color: "from-indigo-100 to-blue-200" },
+  { text: "Interactive charts and analytics reports", color: "from-pink-100 to-rose-200" },
   { text: "Scalable dashboard architecture", color: "from-sky-100 to-teal-200" },
       ].map((feature, i) => (
         <motion.div
@@ -212,11 +254,11 @@ export default function DashboardDevlopment() {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 text-center">
 
       {[
-        { title: "Requirement Analysis", color: "from-cyan-100 to-sky-200" },
+        { title: "Business Requirement Analysis", color: "from-cyan-100 to-sky-200" },
         { title: " Dashboard UI/UX Design", color: "from-pink-100 to-rose-200" },
-        { title: "Backend & Data Integration ", color: "from-emerald-100 to-green-200" },
+        { title: "Data Integration & Development", color: "from-emerald-100 to-green-200" },
         { title: "Visualization, Testing & Optimization", color: "from-amber-100 to-yellow-200" },
-        { title: "Launch & Support", color: "from-indigo-100 to-blue-200" },
+        { title: "Launch & Ongoing Support", color: "from-indigo-100 to-blue-200" },
       ].map((step, i) => (
         <motion.div
           key={i}
@@ -279,7 +321,8 @@ export default function DashboardDevlopment() {
       { name: "E-Commerce Solutions", color: "from-emerald-100 to-green-200",link:"/services/ecommerce" },
       { name: "Custom Business Software", color: "from-indigo-100 to-blue-200",link:"/services/custom-software" },
      
-
+       {name:"Vfx and Motion Graphics",color:"from-amber-100 to-yellow-200",link:"/services/vfx"},
+      {name:"Video Editing Services",color:"from-rose-100 to-pink-200",link:"/services/video-editing"}
 
       
     ].map((service, i) => (
@@ -346,14 +389,15 @@ export default function DashboardDevlopment() {
       ====================================================== */}
       <section className="py-32 bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6] text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-          Want Clear Insights Into Your Business?
+        Ready to Build Your Business Dashboard?
         </h2>
 
         <p className="text-white/90 text-lg mb-10">
-      Get a powerful dashboard that drives smarter decisions.
+     Track performance, monitor KPIs and make smarter decisions with a
+custom business dashboard built for your operations.
         </p>
 
-      <button
+      <button onClick={handleWhatsApp}
   className="px-10 sm:px-14 py-4 sm:py-5 rounded-full bg-white
   font-extrabold text-base sm:text-lg shadow-xl hover:scale-110 transition"
 >

@@ -10,11 +10,11 @@ const getISTTimeString = () => {
     hour: "numeric",
     minute: "2-digit",
     second: "2-digit",
-    hour12: true, // 🔥 AM/PM format
+    hour12: true, 
   });
 };
 
-/* ---------- MESSAGE SCHEMA ---------- */
+
 const messageSchema = new mongoose.Schema(
   {
     text: String,

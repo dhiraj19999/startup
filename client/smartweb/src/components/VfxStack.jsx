@@ -1,49 +1,52 @@
-import { motion } from "framer-motion";
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiMongodb,
-  SiMysql,
-  SiFramer
-} from "react-icons/si";
-import { FaAws } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
 
-export default function TechStack() {
+
+
+import capcut from "../assets/capcut.png"
+import { motion } from "framer-motion";
+import { BiLogoAdobe } from "react-icons/bi"
+import { FaAws } from "react-icons/fa";
+import { SiWondersharefilmora } from "react-icons/si";
+import { SiDavinciresolve } from "react-icons/si";
+import { SiBlender } from "react-icons/si";
+import { SiBlackmagicdesign } from "react-icons/si";
+import { SiNuke } from "react-icons/si";
+import { SiCanva } from "react-icons/si";
+import { FaClosedCaptioning } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
+export default function Vfxtechstack() {
   return (
     <section className="w-full py-32 bg-gradient-to-br from-[#F0FFF9] to-[#ECFEFF]">
-      
+
 <Helmet>
 <title>
-Web Development Technology Stack | React, Node, MongoDB | SmartWeb AI
+VFX Tools & Video Editing Technology Stack | SmartWeb AI
 </title>
 
 <meta
 name="description"
-content="SmartWeb AI uses modern web development technologies including React, Next.js, Node.js, MongoDB, MySQL, Tailwind CSS and AWS to build fast, scalable and secure websites."
+content="SmartWeb AI uses professional VFX and video editing tools including Adobe, Blender, DaVinci Resolve, Nuke, CapCut, Filmora and Canva to create cinematic videos and motion graphics."
 />
 
 <meta
 name="keywords"
-content="web development tech stack, React development, Node.js development, MongoDB, Next.js, Tailwind CSS, AWS hosting, MERN stack development"
+content="VFX tools, video editing tools, Adobe Premiere, After Effects, Blender VFX, DaVinci Resolve, Nuke VFX, CapCut editing, Filmora editing, motion graphics tools"
 />
 
 <meta name="robots" content="index, follow" />
 
-<meta property="og:title" content="Web Development Technology Stack | SmartWeb AI" />
+<meta property="og:title" content="VFX Technology Stack | SmartWeb AI" />
 
 <meta
 property="og:description"
-content="Modern technology stack including React, Node, MongoDB, Next.js and AWS."
+content="Professional VFX and video editing tools used to create cinematic videos and motion graphics."
 />
 
 <meta property="og:type" content="website" />
 </Helmet>
+
+
+
+
       <div className="px-6 md:px-12 lg:px-28 max-w-7xl mx-auto text-center">
 
         <motion.h2
@@ -56,8 +59,7 @@ content="Modern technology stack including React, Node, MongoDB, Next.js and AWS
         </motion.h2>
 
         <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-20">
-          We use modern, trusted, and scalable technologies to build
-          fast, secure, and future-ready websites for your business.
+        We use advanced VFX and professional video editing tools to create cinematic, high-quality videos, visual effects, motion graphics, and engaging content for brands, YouTube, and social media.
         </p>
 
         {/* 🔵 BALANCED CIRCULAR TECH STACK */}
@@ -74,20 +76,17 @@ content="Modern technology stack including React, Node, MongoDB, Next.js and AWS
           "
         >
           {[
-            { icon: <SiHtml5 />, label: "HTML", color: "from-orange-400 to-orange-600" },
-            { icon: <SiCss3 />, label: "CSS", color: "from-blue-400 to-blue-600" },
-            { icon: <SiJavascript />, label: "JavaScript", color: "from-yellow-300 to-yellow-500" },
-            { icon: <SiReact />, label: "React", color: "from-cyan-400 to-cyan-600" },
-            { icon: <SiNextdotjs />, label: "Next.js", color: "from-gray-700 to-gray-900" },
-            { icon: <SiTailwindcss />, label: "Tailwind", color: "from-sky-400 to-sky-600" },
-            { icon: <SiNodedotjs />, label: "Node.js", color: "from-green-400 to-green-600" },
-            { icon: <SiMongodb />, label: "MongoDB", color: "from-emerald-400 to-emerald-600" },
-            { icon: <SiMysql />, label: "SQL", color: "from-indigo-400 to-indigo-600" },
-            { icon: <FaAws />, label: "AWS", color: "from-amber-400 to-amber-600" },
-            { icon: <SiReact />, label: "React Native", color: "from-cyan-400 to-cyan-600" },
-            { icon: <SiFramer />, label: "Framer Motion", color: "from-pink-400 to-pink-600" },
+            { icon: <BiLogoAdobe />, label: "Adobe Suite", color: "from-orange-400 to-orange-600" },
+            { icon: <FaClosedCaptioning/>, label: "CapCut", color: "from-blue-400 to-blue-600" },
+            { icon: <SiWondersharefilmora />, label: "Wondershare Filmora", color: "from-green-400 to-green-600" },
+            { icon: <SiDavinciresolve />, label: "DaVinci Resolve", color: "from-purple-400 to-purple-600" },
+            { icon: <SiBlender />, label: "Blender", color: "from-pink-400 to-pink-600" },
+            { icon: <SiBlackmagicdesign />, label: "Blackmagic Design", color: "from-gray-400 to-gray-600" },
+            { icon: <SiNuke />, label: "Nuke", color: "from-gray-400 to-gray-600" },
+            { icon: <SiCanva />, label: "Canva", color: "from-pink-400 to-pink-600" },
+           
           ].map((tech, i) => {
-            const angle = (360 / 12) * i;
+            const angle = (360 / 8) * i;
             const radius =
               typeof window !== "undefined" && window.innerWidth < 640
                 ? 110

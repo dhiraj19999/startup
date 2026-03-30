@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import softwareHero from "../../assets/custom.png";
 import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
-
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
@@ -27,9 +27,48 @@ const stagger = {
 };
 
 export default function CustomBusinessDevelopment() {
+
+  const handleWhatsApp = () => {
+  const phone = "918459116231"; // apna number
+
+  const message = `Hi SmartWeb AI 👋
+
+I’m interested in your custom business software development services.
+
+
+Please share more details.`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
+
   return (
     <main className="w-full overflow-x-hidden text-[#0F172A] text-base sm:text-[15px]">
+<Helmet>
+<title>
+Custom Business Software Development | SmartWeb AI
+</title>
 
+<meta
+name="description"
+content="SmartWeb AI provides custom business software development including CRM, ERP, dashboards and workflow automation. We build scalable software tailored to your business operations."
+/>
+
+<meta
+name="keywords"
+content="custom business software, CRM development, ERP software development, business automation software, custom dashboard development, workflow automation software"
+/>
+
+<meta name="robots" content="index, follow" />
+
+<meta property="og:title" content="Custom Business Software | SmartWeb AI" />
+<meta
+property="og:description"
+content="Tailor-made software solutions designed for your business workflow."
+/>
+</Helmet>
       {/* ======================================================
          HERO
       ====================================================== */}
@@ -44,13 +83,14 @@ export default function CustomBusinessDevelopment() {
           >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
               Custom <span className="text-[#22FF88]">Business</span><br />
-              Software
+              Software Development
             </h1>
 
             <p className="text-lg text-gray-900 max-w-xl">
               Looking for software built exactly for your business workflow?
-              We develop powerful custom software solutions that streamline
-              operations, automate processes, and scale with your business.
+              We develop powerful custom software solutions that tailored to your workflow, operations
+and business goals. Automate processes, manage data efficiently and
+scale your business with powerful custom-built solutions.
             </p>
           </motion.div>
 
@@ -82,17 +122,17 @@ export default function CustomBusinessDevelopment() {
   whileInView="visible"
   className="text-base sm:text-lg text-gray-900 leading-relaxed"
 >
-  Generic software often forces businesses to change how they work.
-            Custom business software does the opposite — it adapts to your
-            exact workflow and operational needs.
-            <br /><br />
-            We design and develop tailor-made software solutions that automate
-            repetitive tasks, improve team efficiency, and provide full control
-            over business operations.
-            <br /><br />
-            Our custom systems are secure, scalable, and future-ready,
-            ensuring long-term performance and seamless integration with
-            your existing tools.
+  Custom business software is designed specifically for your workflow,
+operations and business goals. Unlike generic tools, custom solutions
+adapt to your processes and give you full control over your system.
+
+We build scalable software for automation, data management, team
+collaboration and business analytics. Our solutions help reduce manual
+work, improve efficiency and streamline operations.
+
+From CRM and ERP systems to dashboards and workflow automation,
+we develop secure, high-performance software tailored to your
+business growth and long-term scalability.
 </motion.p>
 
         </div>
@@ -113,12 +153,12 @@ export default function CustomBusinessDevelopment() {
             </motion.h3>
 
             {[
-              "Businesses with unique workflows",
-              "Enterprises needing internal systems",
-              "Growing startups & SMEs",
-              "Operations & management teams",
-              "Companies replacing manual processes",
-            ].map((item, i) => (
+"Businesses with unique workflows",
+"Companies replacing manual processes",
+"Enterprises needing internal software",
+"Startups building scalable systems",
+"Operations & management teams",
+].map((item, i) => (
               <motion.p key={i} variants={fadeUp}
                 className="text-gray-700 font-medium mb-3">
                 ✔ {item}
@@ -135,11 +175,12 @@ export default function CustomBusinessDevelopment() {
 
             <motion.ul variants={fadeUp}
               className="space-y-4 text-gray-700 font-medium">
-               <li>• Internal management systems</li>
-              <li>• Workflow & process automation</li>
-              <li>• ERP & CRM solutions</li>
-              <li>• Custom admin panels</li>
-              <li>• Business reporting systems</li>
+              <li>• CRM & customer management systems</li>
+<li>• ERP & business operations software</li>
+<li>• Workflow automation systems</li>
+<li>• Inventory & order management software</li>
+<li>• Custom admin dashboards</li>
+<li>• Business reporting & analytics systems</li>
             </motion.ul>
           </motion.div>
         </div>
@@ -172,13 +213,13 @@ export default function CustomBusinessDevelopment() {
 
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
       {[
-        { text: "Custom business logic & workflows", color: "from-cyan-100 to-cyan-200" },
-        { text: "Scalable system architecture", color: "from-green-100 to-emerald-200" },
-        { text: "High security & access control", color: "from-yellow-100 to-amber-200" },
-        { text: "Seamless third-party integrations", color: "from-indigo-100 to-blue-200" },
-        { text: "Performance-optimized backend", color: "from-pink-100 to-rose-200" },
-        { text: "Long-term maintainability", color: "from-sky-100 to-teal-200" },
-      ].map((feature, i) => (
+{ text: "Custom software tailored to your business workflow", color: "from-cyan-100 to-cyan-200" },
+{ text: "CRM, ERP and business management systems", color: "from-green-100 to-emerald-200" },
+{ text: "Workflow automation and process optimization", color: "from-yellow-100 to-amber-200" },
+{ text: "Secure role-based access and data protection", color: "from-indigo-100 to-blue-200" },
+{ text: "Scalable architecture for business growth", color: "from-pink-100 to-rose-200" },
+{ text: "Integration with existing tools and APIs", color: "from-sky-100 to-teal-200" },
+].map((feature, i) => (
         <motion.div
           key={i}
           variants={fadeUp}
@@ -219,12 +260,12 @@ export default function CustomBusinessDevelopment() {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 text-center">
 
       {[
-        { title: "Requirement Analysis", color: "from-cyan-100 to-sky-200" },
-        { title: "UI/UX Design", color: "from-pink-100 to-rose-200" },
-        { title: "Custom Software Development", color: "from-emerald-100 to-green-200" },
-        { title: "Testing & Optimization", color: "from-amber-100 to-yellow-200" },
-        { title: "Launch & Support", color: "from-indigo-100 to-blue-200" },
-      ].map((step, i) => (
+{ title: "Business Requirement Analysis", color: "from-cyan-100 to-sky-200" },
+{ title: "Software Architecture Planning", color: "from-pink-100 to-rose-200" },
+{ title: "Custom Software Development", color: "from-emerald-100 to-green-200" },
+{ title: "Testing & Optimization", color: "from-amber-100 to-yellow-200" },
+{ title: "Launch & Ongoing Support", color: "from-indigo-100 to-blue-200" },
+].map((step, i) => (
         <motion.div
           key={i}
           variants={fadeUp}
@@ -286,6 +327,8 @@ export default function CustomBusinessDevelopment() {
       { name: "E-Commerce Solutions", color: "from-emerald-100 to-green-200",link:"/services/ecommerce" },
        
       { name: "Business Dashboard", color: "from-violet-100 to-purple-200",link:"/services/dashboard" },
+       {name:"Vfx and Motion Graphics",color:"from-amber-100 to-yellow-200",link:"/services/vfx"},
+      {name:"Video Editing Services",color:"from-rose-100 to-pink-200",link:"/services/video-editing"}
 
     ].map((service, i) => (
       <Link to={service.link} key={i} style={{ textDecoration: 'none' }}>
@@ -359,7 +402,7 @@ export default function CustomBusinessDevelopment() {
           Let’s create a software solution perfectly aligned with your business.
         </p>
 
-      <button
+      <button onClick={handleWhatsApp}
   className="px-10 sm:px-14 py-4 sm:py-5 rounded-full bg-white
   font-extrabold text-base sm:text-lg shadow-xl hover:scale-110 transition"
 >

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import aiHero from "../../assets/ai.png";
 import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
-
+import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
 
@@ -29,8 +29,56 @@ const stagger = {
 };
 
 export default function AIAutomationSolutions() {
+
+
+const handleWhatsApp = () => {
+  const phone = "918459116231"; // apna number
+
+  const message = `Hi SmartWeb AI 👋
+
+I’m interested in your Ai automation services.
+
+
+Please share more details.`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
+
+
   return (
     <main className="w-full overflow-x-hidden text-[#0F172A] text-base sm:text-[15px]">
+
+
+
+       <Helmet>
+<title>
+AI Automation Solutions for Business | SmartWeb AI
+</title>
+
+<meta
+name="description"
+content="SmartWeb AI provides AI automation solutions for businesses including chatbots, workflow automation, CRM automation and intelligent systems. Automate operations, reduce manual work and grow faster."
+/>
+
+<meta
+name="keywords"
+content="AI automation solutions, business automation, AI chatbot development, workflow automation, CRM automation, AI business solutions, automation software, smartweb ai"
+/>
+
+<meta name="robots" content="index, follow" />
+<meta name="author" content="SmartWeb AI" />
+
+<meta property="og:title" content="AI Automation Solutions | SmartWeb AI" />
+<meta
+property="og:description"
+content="Automate workflows, reduce manual work and grow your business using AI automation."
+/>
+
+<meta property="og:type" content="website" />
+</Helmet>
 
       {/* ======================================================
          HERO
@@ -46,14 +94,14 @@ export default function AIAutomationSolutions() {
           >
          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
               AI <span className="text-[#22FF88]">Automation</span><br />
-              Solutions
+              Solutions for Business Growth
             </h1>
 
              <p className="text-lg text-gray-900 max-w-xl">
               Looking to automate your business processes and save time?
-              Our AI automation solutions help you reduce manual work,
-              improve efficiency, and scale your operations smarter
-              using intelligent systems.
+              Our AI automation solutions help automate repetitive tasks, reduce manual work and improve efficiency with
+AI-powered automation. We build intelligent systems that handle customer
+interactions, lead management, workflows and business operations automatically.
             </p>
           </motion.div>
 
@@ -85,16 +133,16 @@ export default function AIAutomationSolutions() {
   whileInView="visible"
   className="text-base sm:text-lg text-gray-900 leading-relaxed"
 >
-   AI automation helps businesses eliminate repetitive tasks,
-            reduce human errors, and operate more efficiently.
-            <br /><br />
-            We build intelligent automation systems that handle workflows,
-            customer interactions, data processing, and decision-making
-            with minimal human involvement.
-            <br /><br />
-            Our AI-driven solutions are designed to save time, cut costs,
-            and empower your team to focus on high-value work while
-            automation handles the rest.
+   AI automation helps businesses streamline operations, reduce costs and
+increase productivity. Our solutions automate lead generation, customer
+support, data processing and internal workflows.
+
+We design AI-driven systems that work 24/7, improve decision making and
+eliminate repetitive tasks. This allows your team to focus on growth while
+automation handles routine operations.
+
+From chatbots to workflow automation, we create scalable AI solutions
+that improve efficiency and accelerate business growth.
 </motion.p>
 
         </div>
@@ -112,11 +160,11 @@ export default function AIAutomationSolutions() {
             </motion.h3>
 
             {[
-              "Businesses looking to automate workflows",
-              "Startups scaling operations with limited teams",
-              "Customer support & sales teams",
-              "Enterprises handling large data volumes",
-              "Service-based companies",
+              "Businesses looking to automate manual tasks",
+"Companies handling high customer inquiries",
+"Startups scaling with small teams",
+"Sales & marketing automation needs",
+"Service-based businesses",
             ].map((item, i) => (
               <motion.p key={i} variants={fadeUp}
                 className="text-gray-700 font-medium mb-3">
@@ -132,11 +180,11 @@ export default function AIAutomationSolutions() {
 
             <motion.ul variants={fadeUp}
               className="space-y-4 text-gray-700 font-medium">
-                    <li>• AI chatbots & virtual assistants</li>
-              <li>• Automated CRM & lead handling</li>
-              <li>• Workflow & task automation</li>
-              <li>• Data analysis & reporting automation</li>
-              <li>• Customer support automation</li>
+                <li>• AI chatbots for customer support</li>
+<li>• Automated lead capture & follow-up</li>
+<li>• CRM & sales automation</li>
+<li>• Workflow automation</li>
+<li>• Email & notification automation</li>
             </motion.ul>
           </motion.div>
         </div>
@@ -169,12 +217,12 @@ export default function AIAutomationSolutions() {
 
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
       {[
-        { text: "AI-powered workflow automation", color: "from-cyan-100 to-cyan-200" },
-        { text: "Smart chatbots & assistants", color: "from-green-100 to-emerald-200" },
-        { text: "Real-time data processing", color: "from-yellow-100 to-amber-200" },
-        { text: "Seamless system integrations", color: "from-indigo-100 to-blue-200" },
-        { text: "Scalable automation architecture", color: "from-pink-100 to-rose-200" },
-        { text: "Reduced operational costs", color: "from-sky-100 to-teal-200" },
+        { text: "AI-powered business automation", color: "from-cyan-100 to-cyan-200" },
+        { text: "Smart chatbots & virtual assistants", color: "from-green-100 to-emerald-200" },
+        { text: "Automated lead generation systems", color: "from-yellow-100 to-amber-200" },
+        { text: "Workflow & task automation", color: "from-indigo-100 to-blue-200" },
+        { text: "CRM & sales automation", color: "from-pink-100 to-rose-200" },
+        { text: "Reduced manual workload", color: "from-sky-100 to-teal-200" },
       ].map((feature, i) => (
         <motion.div
           key={i}
@@ -216,11 +264,11 @@ export default function AIAutomationSolutions() {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 text-center">
 
       {[
-        { title: "Requirement Analysis", color: "from-cyan-100 to-sky-200" },
-        { title: "Automation Strategy Design", color: "from-pink-100 to-rose-200" },
+        { title: "Business Requirement Analysis", color: "from-cyan-100 to-sky-200" },
+        { title: "Automation Strategy Planning", color: "from-pink-100 to-rose-200" },
         { title: "AI Model & Workflow Development", color: "from-emerald-100 to-green-200" },
         { title: "Testing & Optimization", color: "from-amber-100 to-yellow-200" },
-        { title: "Launch & Support", color: "from-indigo-100 to-blue-200" },
+        { title: "Launch & Ongoing  Support", color: "from-indigo-100 to-blue-200" },
       ].map((step, i) => (
         <motion.div
           key={i}
@@ -283,6 +331,8 @@ export default function AIAutomationSolutions() {
       { name: "E-Commerce Solutions", color: "from-emerald-100 to-green-200",link:"/services/ecommerce" },
       { name: "Custom Business Software", color: "from-indigo-100 to-blue-200",link:"/services/custom-software" },
       { name: " Business Dashboard ", color: "from-violet-100 to-purple-200",link:"/services/dashboard" },
+      {name:"Vfx and Motion Graphics",color:"from-amber-100 to-yellow-200",link:"/services/vfx"},
+      {name:"Video Editing Services",color:"from-rose-100 to-pink-200",link:"/services/video-editing"}
     ].map((service, i) => (
       <Link to={service.link} key={i} >
       <motion.div
@@ -357,14 +407,14 @@ export default function AIAutomationSolutions() {
       ====================================================== */}
       <section className="py-32 bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6] text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-         Ready to Automate Your Business?
+       Ready to Automate Your Business Operations?
         </h2>
 
         <p className="text-white/90 text-lg mb-10">
-          Let AI handle repetitive work while you focus on growth.
+         Automate workflows, reduce manual work and scale your business with AI automation solutions.
         </p>
 
-      <button
+      <button onClick={handleWhatsApp}
   className="px-10 sm:px-14 py-4 sm:py-5 rounded-full bg-white
   font-extrabold text-base sm:text-lg shadow-xl hover:scale-110 transition"
 >

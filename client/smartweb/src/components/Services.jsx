@@ -6,7 +6,9 @@ import ecom from "../assets/e-commerce.png";
 import dsahbord from "../assets/dashbord.png";
 import custom from "../assets/custom.png";
 import { Link } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
+import vfx from "../assets/vfx.png";
+import video from "../assets/video.png";
 /* ================= ANIMATION (UNCHANGED) ================= */
 const container = {
   hidden: { opacity: 0 },
@@ -40,16 +42,42 @@ export default function Services() {
   return (
     <section className="w-full py-32 bg-white">
       {/* 🔥 FULL WIDTH CONTAINER */}
+      <Helmet>
+<title>
+Business Website Development, Mobile Apps & AI Automation | SmartWeb AI
+</title>
+
+<meta
+name="description"
+content="SmartWeb AI provides business website development, mobile app development, AI automation, ecommerce solutions and custom software. We help businesses generate leads, automate operations and grow faster."
+/>
+
+<meta
+name="keywords"
+content="business website development, web development services, mobile app development, AI automation services, ecommerce website development, dashboard development, custom software development"
+/>
+
+<meta name="robots" content="index, follow" />
+
+<meta property="og:title" content="SmartWeb AI Services" />
+<meta
+property="og:description"
+content="Business website, mobile apps and AI automation solutions for growth."
+/>
+</Helmet>
+
+
       <div className="w-full max-w-none px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-14">
 
         {/* ================= HEADING ================= */}
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-6">
-          Our <span className="text-[#22FF88]">Services</span>
+          Our  Business Growth <span className="text-[#22FF88]">Services</span>
         </h2>
 
         <p className="text-center text-gray-600 text-lg max-w-4xl mx-auto mb-24">
-          Business-focused digital solutions designed to increase revenue,
-          automate operations and scale your company faster.
+        We provide business-focused website development, mobile apps and AI automation
+solutions that help you attract customers, generate leads, automate operations
+and scale your business faster.
         </p>
 
         {/* ================= GRID ================= */}
@@ -147,6 +175,36 @@ export default function Services() {
               bg: "from-[#FDF2F8] to-[#FBCFE8]",
               link: "/services/custom-software",
             },
+           {
+  title: "VFX & Motion Graphics",
+  img: vfx,
+  desc:
+    "Need cinematic visuals for your brand We create high-quality VFX and motion graphics that elevate your videos, ads and brand presence...",
+  points: [
+    "Cinematic visual effects",
+    "Motion graphics & animations",
+    "YouTube & ad creatives",
+    "Brand storytelling visuals",
+  ],
+  bg: "from-[#E0F2FE] to-[#BAE6FD]",
+  link: "/services/vfx",
+},
+{
+  title: "Video Editing Services",
+  img: video,
+  desc:
+    "Professional video editing for businesses, creators and brands We craft engaging videos designed to attract audience and increase conversions...",
+  points: [
+    "Professional video editing",
+    "Reels & social media videos",
+    "YouTube video editing",
+    "Business promo videos",
+  ],
+  bg: "from-[#FCE7F3] to-[#FBCFE8]",
+  link: "/services/video-editing",
+}
+
+
           ].map((service, i) => (
         <Link to={service.link} key={i} className="no-underline">
             <motion.div

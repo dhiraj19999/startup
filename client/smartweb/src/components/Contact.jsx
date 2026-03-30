@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
-
+import { Helmet } from "react-helmet-async";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -90,6 +90,36 @@ export default function Contact() {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#020617] to-black flex items-center justify-center px-4 py-20">
+     
+     <Helmet>
+<title>
+Contact SmartWeb AI | Website, App & AI Development Company India
+</title>
+
+<meta
+name="description"
+content="Contact SmartWeb AI for website development, mobile app development, AI automation, ecommerce, video editing and VFX services. Get a free quote for your business project across India."
+/>
+
+<meta
+name="keywords"
+content="contact SmartWeb AI, website development contact India, mobile app development contact, AI automation company India, ecommerce developer contact, VFX video editing company India, SmartWeb AI contact"
+/>
+
+<meta name="robots" content="index, follow" />
+
+<meta property="og:title" content="Contact SmartWeb AI" />
+
+<meta
+property="og:description"
+content="Get in touch with SmartWeb AI for websites, mobile apps, AI automation, ecommerce and VFX services."
+/>
+
+<meta property="og:type" content="website" />
+
+<link rel="canonical" href="https://smartwebai.in/contact" />
+</Helmet>
+     
       <motion.div
         variants={fadeUp}
         initial="hidden"
@@ -110,7 +140,7 @@ export default function Contact() {
           <div className="space-y-3 text-sm text-white/70">
             <p>📍 India</p>
             <p>📞 +91 8459116231</p>
-            <p>✉️ dhirajgarad46@gmail.com</p>
+            <p>✉️ smartwebai99@gmail.com</p>
           </div>
         </div>
 

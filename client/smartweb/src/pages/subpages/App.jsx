@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import appHero from "../../assets/app.png";
 import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
-
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
@@ -27,9 +27,48 @@ const stagger = {
 };
 
 export default function MobileAppDevelopment() {
+  const handleWhatsApp = () => {
+  const phone = "918459116231"; // apna number
+
+  const message = `Hi SmartWeb AI 👋
+
+I’m interested in your Mobile App development services.
+
+
+Please share more details.`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
   return (
     <main className="w-full overflow-x-hidden text-[#0F172A] text-base sm:text-[15px]">
+<Helmet>
+<title>
+Mobile App Development for Business | Android & iOS Apps | SmartWeb AI
+</title>
 
+<meta
+name="description"
+content="SmartWeb AI provides mobile app development services for businesses including Android apps, iOS apps and cross platform apps. We build scalable mobile applications that improve customer engagement and business growth."
+/>
+
+<meta
+name="keywords"
+content="mobile app development, android app development, ios app development, business mobile app, cross platform app development, startup app development, smartweb ai mobile apps"
+/>
+
+<meta name="robots" content="index, follow" />
+
+<meta property="og:title" content="Mobile App Development | SmartWeb AI" />
+<meta
+property="og:description"
+content="We build Android, iOS and cross platform mobile apps for business growth."
+/>
+
+<meta property="og:type" content="website" />
+</Helmet>
       {/* ======================================================
          HERO
       ====================================================== */}
@@ -43,15 +82,15 @@ export default function MobileAppDevelopment() {
             animate="visible"
           >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-              Mobile <span className="text-[#22FF88]">App</span><br />
-              Development
+           Business   Mobile <span className="text-[#22FF88]">App</span><br />
+              Development Solutions
             </h1>
 
             <p className="text-lg text-gray-900 max-w-xl">
               Looking for a mobile app to engage your customers better?
-              We build smooth, user-friendly mobile applications that help
-              businesses grow, retain users, and deliver seamless digital
-              experiences.
+              We build smooth, user-friendly high-performance Android and iOS mobile apps that help businesses
+engage customers, automate services and increase revenue. Our mobile apps
+are fast, scalable and designed for long-term business growth.
             </p>
           </motion.div>
 
@@ -83,17 +122,16 @@ export default function MobileAppDevelopment() {
   whileInView="visible"
   className="text-base sm:text-lg text-gray-900 leading-relaxed"
 >
-  A mobile app allows your business to stay directly connected
-            with your customers anytime and anywhere.
-            <br /><br />
-            We design and develop high-performance mobile applications
-            that are intuitive, visually appealing, and built to scale.
-            Our apps focus on user experience, performance, and long-term
-            business growth.
-            <br /><br />
-            From idea validation to app launch, we create secure,
-            fast, and reliable mobile apps that turn your vision
-            into a powerful digital product.
+ Mobile apps help businesses connect directly with customers, improve
+engagement and streamline operations. We design and develop high-performance
+mobile applications tailored to your business goals.
+
+Our mobile apps focus on user experience, speed and scalability. From
+startup MVPs to enterprise apps, we build secure and reliable solutions
+that grow with your business.
+
+We handle everything from idea validation, UI/UX design, development,
+testing and launch to ongoing support and updates.
 </motion.p>
 
         </div>
@@ -111,11 +149,11 @@ export default function MobileAppDevelopment() {
             </motion.h3>
 
             {[
-              "Startups launching mobile apps",
-              "Businesses improving customer engagement",
-              "Service providers with booking apps",
-              "E-commerce & delivery platforms",
-              "Enterprises needing internal apps",
+             "Businesses wanting customer engagement apps",
+"Startups launching mobile products",
+"Service providers with booking apps",
+"E-commerce & delivery businesses",
+"Companies needing internal business apps",
             ].map((item, i) => (
               <motion.p key={i} variants={fadeUp}
                 className="text-gray-700 font-medium mb-3">
@@ -131,11 +169,12 @@ export default function MobileAppDevelopment() {
 
             <motion.ul variants={fadeUp}
               className="space-y-4 text-gray-700 font-medium">
-              <li>• Customer engagement mobile apps</li>
-              <li>• E-commerce & delivery apps</li>
-              <li>• Booking & service apps</li>
-              <li>• Business productivity apps</li>
-              <li>• Startup MVP applications</li>
+             <li>• Customer engagement mobile apps</li>
+  <li>• E-commerce & online ordering apps</li>
+  <li>• Booking & appointment apps</li>
+  <li>• Delivery & logistics tracking apps</li>
+  <li>• Business management mobile apps</li>
+  <li>• Startup MVP mobile applications</li>
             </motion.ul>
           </motion.div>
         </div>
@@ -168,12 +207,12 @@ export default function MobileAppDevelopment() {
 
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
       {[
-        { text: "Smooth & intuitive user experience", color: "from-cyan-100 to-cyan-200" },
-        { text: "High-performance app architecture", color: "from-green-100 to-emerald-200" },
-        { text: "Secure authentication & data handling", color: "from-yellow-100 to-amber-200" },
-        { text: "Scalable backend integration", color: "from-indigo-100 to-blue-200" },
-        { text: "Push notifications & real-time updates", color: "from-pink-100 to-rose-200" },
-        { text: "Cross-platform compatibility", color: "from-sky-100 to-teal-200" },
+        { text: "Android & iOS mobile app development", color: "from-cyan-100 to-cyan-200" },
+        { text: "Cross platform app architecture", color: "from-green-100 to-emerald-200" },
+        { text: "Secure login & user authentication", color: "from-yellow-100 to-amber-200" },
+        { text: "Push notifications & real-time updates", color: "from-indigo-100 to-blue-200" },
+        { text: "Scalable backend integration", color: "from-pink-100 to-rose-200" },
+        { text: "High performance user experience", color: "from-sky-100 to-teal-200" },
       ].map((feature, i) => (
         <motion.div
           key={i}
@@ -215,12 +254,12 @@ export default function MobileAppDevelopment() {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 text-center">
 
       {[
-        { title: "Requirement Analysis", color: "from-cyan-100 to-sky-200" },
-        { title: "UI/UX Design", color: "from-pink-100 to-rose-200" },
-        { title: "Mobile App Development", color: "from-emerald-100 to-green-200" },
-        { title: "Testing & Optimization", color: "from-amber-100 to-yellow-200" },
-        { title: "Launch & Support", color: "from-indigo-100 to-blue-200" },
-      ].map((step, i) => (
+{ title: "Requirement & Business Analysis", color: "from-cyan-100 to-sky-200" },
+{ title: "UI/UX Design & App Planning", color: "from-pink-100 to-rose-200" },
+{ title: "Mobile App Development", color: "from-emerald-100 to-green-200" },
+{ title: "Testing & Performance Optimization", color: "from-amber-100 to-yellow-200" },
+{ title: "Launch & Ongoing Support", color: "from-indigo-100 to-blue-200" },
+].map((step, i) => (
         <motion.div
           key={i}
           variants={fadeUp}
@@ -281,6 +320,8 @@ export default function MobileAppDevelopment() {
       { name: "E-Commerce Solutions", color: "from-emerald-100 to-green-200",link:"/services/ecommerce" },
       { name: "Custom Business Software", color: "from-indigo-100 to-blue-200",link:"/services/custom-software" },
       { name: "Business Dashboard", color: "from-violet-100 to-purple-200",link:"/services/dashboard" },
+       {name:"Vfx and Motion Graphics",color:"from-amber-100 to-yellow-200",link:"/services/vfx"},
+      {name:"Video Editing Services",color:"from-rose-100 to-pink-200",link:"/services/video-editing"}
     ].map((service, i) => (
       <Link to={service.link} key={i} style={{ textDecoration: 'none' }}>
       <motion.div
@@ -348,14 +389,14 @@ export default function MobileAppDevelopment() {
       ====================================================== */}
       <section className="py-32 bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6] text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-          Ready to Build Your Mobile App?
+         Ready to Launch Your Business Mobile App?
         </h2>
 
         <p className="text-white/90 text-lg mb-10">
-         Let’s turn your app idea into a powerful digital product.
+      Turn your idea into a powerful mobile app that engages customers and grows your business.
         </p>
 
-      <button
+      <button onClick={handleWhatsApp}
   className="px-10 sm:px-14 py-4 sm:py-5 rounded-full bg-white
   font-extrabold text-base sm:text-lg shadow-xl hover:scale-110 transition"
 >

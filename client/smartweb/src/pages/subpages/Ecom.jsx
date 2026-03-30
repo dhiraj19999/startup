@@ -6,7 +6,7 @@ import { FaPython } from "react-icons/fa";
 import TechStack from "../../components/Techstack";
 import { Link } from "react-router-dom";
 
-
+import { Helmet } from "react-helmet-async";
 
 
 /* ================= ANIMATIONS ================= */
@@ -29,9 +29,46 @@ const stagger = {
 };
 
 export default function Ecommerce() {
+ 
+  const handleWhatsApp = () => {
+  const phone = "918459116231"; // apna number
+
+  const message = `Hi SmartWeb AI 👋
+
+I’m interested in your Ecommerce website development services.
+
+
+Please share more details.`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
+
   return (
     <main className="w-full overflow-x-hidden text-[#0F172A] text-base sm:text-[15px]">
+<Helmet>
+<title>
+Ecommerce Website Development | Online Store Development | SmartWeb AI
+</title>
 
+<meta
+name="description"
+content="Professional ecommerce website development services. We build secure online stores, multi vendor marketplaces, shopping websites and scalable ecommerce platforms to grow your online business."
+/>
+
+<meta
+name="keywords"
+content="ecommerce website development, online store development, ecommerce development company, shopping website development, ecommerce solutions, multi vendor marketplace"
+/>
+
+<meta name="robots" content="index, follow" />
+
+<meta property="og:title" content="Ecommerce Website Development | SmartWeb AI" />
+<meta property="og:description"
+content="Launch your online store with secure payment integration, product management and scalable ecommerce platform." />
+</Helmet>
       {/* ======================================================
          HERO
       ====================================================== */}
@@ -50,10 +87,11 @@ export default function Ecommerce() {
 
             <p className="text-lg text-gray-900 max-w-xl">
               Looking to sell your products online with full control?
-              We build powerful e-commerce platforms that help you manage
-              products, accept payments securely, and grow your online
-              sales without limitations.
-            </p>
+              We build powerful e-commerce platforms that help businesses
+sell products online, manage inventory, accept secure payments and
+scale revenue with a conversion-focused shopping experience.
+</p>
+            
           </motion.div>
 
           <motion.img
@@ -84,16 +122,16 @@ export default function Ecommerce() {
   whileInView="visible"
   className="text-base sm:text-lg text-gray-900 leading-relaxed"
 >
-   An e-commerce website allows you to sell products online,
-            manage orders, and reach customers beyond geographical limits.
-            <br /><br />
-            We design and develop scalable e-commerce solutions that are
-            fast, secure, and optimized for conversions, ensuring smooth
-            shopping experiences for your customers.
-            <br /><br />
-            From product management to payment gateways and order tracking,
-            our platforms give you complete control over your online store
-            while helping you increase revenue and customer trust.
+  E-commerce websites allow businesses to sell products online,
+reach more customers and manage orders efficiently.
+
+We develop scalable e-commerce platforms with secure payment
+integration, product management, inventory tracking and
+high-conversion checkout systems.
+
+Our solutions are optimized for performance, SEO and mobile
+shopping to ensure better user experience, higher conversions
+and long-term business growth.
 </motion.p>
 
         </div>
@@ -111,12 +149,12 @@ export default function Ecommerce() {
             </motion.h3>
 
             {[
-              "Retail & product-based businesses",
-              "Startups launching online stores",
-              "D2C (Direct-to-Consumer) brands",
-              "Wholesalers & distributors",
-              "Businesses expanding offline to online",
-            ].map((item, i) => (
+"Retail businesses selling products online",
+"Brands launching direct-to-consumer stores",
+"Wholesalers & distributors going digital",
+"Startups building ecommerce platforms",
+"Businesses expanding offline to online sales",
+].map((item, i) => (
               <motion.p key={i} variants={fadeUp}
                 className="text-gray-700 font-medium mb-3">
                 ✔ {item}
@@ -131,11 +169,11 @@ export default function Ecommerce() {
 
             <motion.ul variants={fadeUp}
               className="space-y-4 text-gray-700 font-medium">
-                   <li>• Online product selling platforms</li>
-              <li>• Multi-vendor marketplaces</li>
-              <li>• Subscription-based e-commerce</li>
-              <li>• Inventory & order management</li>
-              <li>• High-conversion checkout systems</li>
+                  <li>• Online product selling websites</li>
+<li>• Multi-vendor marketplace platforms</li>
+<li>• B2B & B2C ecommerce websites</li>
+<li>• Subscription-based online stores</li>
+<li>• Inventory & order management systems</li>
             </motion.ul>
           </motion.div>
         </div>
@@ -168,13 +206,13 @@ export default function Ecommerce() {
 
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
       {[
-        { text: "User-friendly product management", color: "from-cyan-100 to-cyan-200" },
-        { text: "Secure payment gateway integration", color: "from-green-100 to-emerald-200" },
-        { text: "Fast & optimized shopping experience", color: "from-yellow-100 to-amber-200" },
-        { text: "Order tracking & management", color: "from-indigo-100 to-blue-200" },
-        { text: "Mobile-friendly storefront", color: "from-pink-100 to-rose-200" },
-        { text: "Scalable & future-ready architecture", color: "from-sky-100 to-teal-200" },
-      ].map((feature, i) => (
+{ text: "Advanced product & inventory management", color: "from-cyan-100 to-cyan-200" },
+{ text: "Secure payment gateway integration", color: "from-green-100 to-emerald-200" },
+{ text: "High-conversion checkout experience", color: "from-yellow-100 to-amber-200" },
+{ text: "Order, customer & shipping management", color: "from-indigo-100 to-blue-200" },
+{ text: "Mobile optimized shopping experience", color: "from-pink-100 to-rose-200" },
+{ text: "SEO friendly scalable architecture", color: "from-sky-100 to-teal-200" },
+].map((feature, i) => (
         <motion.div
           key={i}
           variants={fadeUp}
@@ -215,12 +253,12 @@ export default function Ecommerce() {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 text-center">
 
       {[
-        { title: "Business & Product Analysis", color: "from-cyan-100 to-sky-200" },
-        { title: "UI/UX Design", color: "from-pink-100 to-rose-200" },
-        { title: "E-Commerce Development", color: "from-emerald-100 to-green-200" },
-        { title: "Testing & Optimization", color: "from-amber-100 to-yellow-200" },
-        { title: "Launch & Support", color: "from-indigo-100 to-blue-200" },
-      ].map((step, i) => (
+{ title: "Business & Product Analysis", color: "from-cyan-100 to-sky-200" },
+{ title: "Store UI/UX Design", color: "from-pink-100 to-rose-200" },
+{ title: "E-Commerce Development", color: "from-emerald-100 to-green-200" },
+{ title: "Testing & Performance Optimization", color: "from-amber-100 to-yellow-200" },
+{ title: "Launch & Ongoing Support", color: "from-indigo-100 to-blue-200" },
+].map((step, i) => (
         <motion.div
           key={i}
           variants={fadeUp}
@@ -281,6 +319,8 @@ export default function Ecommerce() {
       { name: "AI Automation Solutions", color: "from-emerald-100 to-green-200",link:"/services/ai-automation" },
       { name: "Custom Business Software", color: "from-indigo-100 to-blue-200",link:"/services/custom-software" },
       { name: "Business Dashboard", color: "from-violet-100 to-purple-200",link:"/services/dashboard" },
+     {name:"Vfx and Motion Graphics",color:"from-amber-100 to-yellow-200",link:"/services/vfx"},
+      {name:"Video Editing Services",color:"from-rose-100 to-pink-200",link:"/services/video-editing"}
     ].map((service, i) => (
       <Link to={service.link} key={i} >
       <motion.div
@@ -345,14 +385,15 @@ export default function Ecommerce() {
       ====================================================== */}
       <section className="py-32 bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6] text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-         Ready to Start Selling Online?
+         Ready to Launch Your Ecommerce Website?
         </h2>
 
         <p className="text-white/90 text-lg mb-10">
-         Launch your powerful e-commerce store and grow your sales.
+        Start selling online with a secure, scalable and high-converting
+ecommerce store built for your business growth.
         </p>
 
-      <button
+      <button onClick={handleWhatsApp}
   className="px-10 sm:px-14 py-4 sm:py-5 rounded-full bg-white
   font-extrabold text-base sm:text-lg shadow-xl hover:scale-110 transition"
 >

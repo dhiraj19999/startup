@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import webHero from "../../assets/web.png";
+import video from "../../assets/video.png";
 import { FaPython } from "react-icons/fa";
-import TechStack from "../../components/Techstack";
-
+import Vfxtechstack from "../../components/VfxStack";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-import { Helmet } from "react-helmet-async";
+
 
 /* ================= ANIMATIONS ================= */
 const fadeUp = {
@@ -26,14 +26,14 @@ const stagger = {
   },
 };
 
-export default function WebDevelopment() {
-  
-  const handleWhatsApp = () => {
+export default function Vfx() {
+
+    const handleWhatsApp = () => {
   const phone = "918459116231"; // apna number
 
   const message = `Hi SmartWeb AI 👋
 
-I’m interested in your web development services.
+I’m interested in your video editing services.
 
 
 Please share more details.`;
@@ -48,24 +48,28 @@ Please share more details.`;
     <main className="w-full overflow-x-hidden text-[#0F172A] text-base sm:text-[15px]">
 <Helmet>
 <title>
-Business Website Development | Website Design Company | SmartWeb AI
+Professional Video Editing Services | Reels, Ads & YouTube | SmartWeb AI
 </title>
 
 <meta
 name="description"
-content="Professional business website development services. We create SEO optimized websites, company websites, lead generation websites and high converting business websites."
+content="SmartWeb AI provides professional video editing services for businesses, reels, YouTube videos and ad campaigns. We create engaging videos that boost brand visibility and conversions."
 />
 
 <meta
 name="keywords"
-content="website development company, business website development, website design services, company website, professional website, lead generation website"
+content="video editing services, professional video editing, reels editing, youtube video editing, ad video editing, business video editing, social media video editing"
 />
 
-<meta name="robots" content="index, follow"/>
+<meta name="robots" content="index, follow" />
 
-<meta property="og:title" content="Business Website Development | SmartWeb AI"/>
-<meta property="og:description"
-content="We build high converting business websites that generate leads and grow your business."/>
+<meta property="og:title" content="Professional Video Editing | SmartWeb AI" />
+<meta
+property="og:description"
+content="High-quality video editing for ads, reels, YouTube and business promotions."
+/>
+
+<meta property="og:type" content="website" />
 </Helmet>
       {/* ======================================================
          HERO
@@ -80,22 +84,26 @@ content="We build high converting business websites that generate leads and grow
             animate="visible"
           >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-
-              Business <span className="text-[#22FF88]">Website</span><br />
-              Development
+           Professional Video   <span className="text-[#22FF88]">Editing</span><br />
+              Services
             </h1>
 
             <p className="text-lg text-gray-900 max-w-xl">
-              Looking for a professional website for your business?
-              We create modern, high-converting websites that help to attract customers,
-generate leads and grow your online presence. Our websites are fast,
-SEO optimized and conversion focused.
+                Professional video editing for businesses, creators and brands We craft engaging videos designed to 
+                attract audience and increase conversions
+             
+We create engaging, professional videos that attract viewers,
+build brand trust and increase conversions.
+
+From social media reels and YouTube videos to promotional ads
+and product videos, our editing services help you deliver
+powerful visual content.
             </p>
           </motion.div>
 
           <motion.img
-            src={webHero}
-            alt="Business Website Development"
+            src={video}
+            alt="Professional Video Editing Services"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -121,15 +129,19 @@ SEO optimized and conversion focused.
   whileInView="visible"
   className="text-base sm:text-lg text-gray-900 leading-relaxed"
 >
-  Your website is the foundation of your online presence and plays a
-critical role in attracting customers and building trust.
+Video content is one of the most powerful ways to communicate
+your brand and connect with your audience. Professional video
+editing helps transform raw footage into engaging, high-quality
+content that drives results.
 
-We design and develop professional business websites that are visually
-appealing, SEO optimized and strategically structured to generate leads
-and improve conversions.
+We provide complete video editing solutions including cutting,
+transitions, sound design, color grading and motion graphics.
+Our editing focuses on storytelling, clarity and audience
+engagement.
 
-Our websites are fast, mobile responsive, secure and built to scale,
-helping your business stand out online and turn visitors into customers.
+Whether you need videos for social media, marketing campaigns,
+YouTube or business promotions, we create content that enhances
+your brand and improves viewer retention.
 </motion.p>
 
         </div>
@@ -138,23 +150,20 @@ helping your business stand out online and turn visitors into customers.
       {/* ======================================================
          TARGET AUDIENCE + USE CASES
       ====================================================== */}
-      <section className="py-32 bg-gradient-to-br from-[#F0FFF9] to-[#ECFEFF]">
-     <div className="px-4 sm:px-6 md:px-12 lg:px-28 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+    <section className="py-32 bg-gradient-to-br from-[#F0FFF9] to-[#ECFEFF]">
+        <div className="px-4 sm:px-6 md:px-12 lg:px-28 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
 
-
-          {/* Target Audience */}
           <motion.div variants={stagger} initial="hidden" whileInView="visible">
-            <motion.h3 variants={fadeUp}
-              className="text-3xl font-extrabold mb-6">
+            <motion.h3 variants={fadeUp} className="text-3xl font-extrabold mb-6">
               Target Audience
             </motion.h3>
 
             {[
-"Startups launching their online presence",
-"Local businesses & service providers",
-"Small & medium businesses",
-"Coaches, consultants & professionals",
-"Companies needing lead generation websites",
+"Businesses promoting services or products",
+"YouTube creators & influencers",
+"Marketing & advertising agencies",
+"Social media content creators",
+"Brands creating promotional videos",
 ].map((item, i) => (
               <motion.p key={i} variants={fadeUp}
                 className="text-gray-700 font-medium mb-3">
@@ -163,20 +172,19 @@ helping your business stand out online and turn visitors into customers.
             ))}
           </motion.div>
 
-          {/* Use Cases */}
           <motion.div variants={stagger} initial="hidden" whileInView="visible">
-            <motion.h3 variants={fadeUp}
-              className="text-3xl font-extrabold mb-6">
+            <motion.h3 variants={fadeUp} className="text-3xl font-extrabold mb-6">
               Use Cases
             </motion.h3>
 
             <motion.ul variants={fadeUp}
               className="space-y-4 text-gray-700 font-medium">
-             <li>• Lead generation business websites</li>
-<li>• Company profile websites</li>
-<li>• Service based business websites</li>
-<li>• Landing pages for marketing campaigns</li>
-<li>• Brand authority websites</li>
+             <li>•  YouTube video editing</li>
+  <li>• Instagram reels & shorts editing </li>
+  <li>• Business promo videos</li>
+  <li>• Product showcase videos  </li>
+  <li>•  Ad & marketing videos </li>
+  <li>• Social media content editing </li>
             </motion.ul>
           </motion.div>
         </div>
@@ -187,7 +195,7 @@ helping your business stand out online and turn visitors into customers.
       ====================================================== */}
     
      {/* ================= TECHNOLOGY STACK ================= */}
-        <TechStack/>
+        <Vfxtechstack/>
 
 
 
@@ -209,13 +217,13 @@ helping your business stand out online and turn visitors into customers.
 
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
       {[
-{ text: "Mobile-first responsive website design", color: "from-cyan-100 to-cyan-200" },
-{ text: "SEO optimized website structure", color: "from-green-100 to-emerald-200" },
-{ text: "Fast loading performance", color: "from-yellow-100 to-amber-200" },
-{ text: "Conversion focused UI/UX", color: "from-indigo-100 to-blue-200" },
-{ text: "Secure and scalable architecture", color: "from-pink-100 to-rose-200" },
-{ text: "Easy future scalability", color: "from-sky-100 to-teal-200" },
-].map((feature, i) => (
+        { text: "Professional video editing & storytelling", color: "from-cyan-100 to-cyan-200" },
+        { text: "Smooth transitions & visual effects", color: "from-green-100 to-emerald-200" },
+        { text: "Color grading & sound enhancement", color: "from-yellow-100 to-amber-200" },
+        { text: "Social media optimized video formats", color: "from-indigo-100 to-blue-200" },
+        { text: "High-quality export & delivery", color: "from-pink-100 to-rose-200" },
+        { text: "Fast turnaround & revisions", color: "from-sky-100 to-teal-200" },
+      ].map((feature, i) => (
         <motion.div
           key={i}
           variants={fadeUp}
@@ -250,17 +258,17 @@ helping your business stand out online and turn visitors into customers.
     <section className="py-32 bg-white">
   <div className="px-6 md:px-12 lg:px-28">
     <h2 className="text-4xl font-extrabold text-center mb-20">
-      Website Designed & Developed in Just 5 Steps
+    Video editing in Just 5 Steps
     </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 text-center">
 
       {[
-{ title: "Business Requirement Analysis", color: "from-cyan-100 to-sky-200" },
-{ title: "Website UI/UX Design", color: "from-pink-100 to-rose-200" },
-{ title: "Website Development", color: "from-emerald-100 to-green-200" },
-{ title: "Testing & Optimization", color: "from-amber-100 to-yellow-200" },
-{ title: "Launch & Ongoing Support", color: "from-indigo-100 to-blue-200" },
+{ title: "Requirement & content understanding", color: "from-cyan-100 to-sky-200" },
+{ title: "Footage review & planning", color: "from-pink-100 to-rose-200" },
+{ title: "Editing & visual enhancements", color: "from-emerald-100 to-green-200" },
+{ title: "Color grading & sound optimization", color: "from-amber-100 to-yellow-200" },
+{ title: "Delivery & Ongoing Support", color: "from-indigo-100 to-blue-200" },
 ].map((step, i) => (
         <motion.div
           key={i}
@@ -317,15 +325,15 @@ helping your business stand out online and turn visitors into customers.
     className="flex flex-wrap justify-center gap-6 md:gap-8"
   >
     {[
-      { name: "Mobile App Development", color: "from-cyan-100 to-sky-200",link:"/services/mobile-app" },
+      { name: "Business Website Development", color: "from-cyan-100 to-sky-200",link:"/services/web-development" },
       { name: "AI Automation", color: "from-pink-100 to-rose-200",link:"/services/ai-automation" },
       { name: "E-Commerce Solutions", color: "from-emerald-100 to-green-200",link:"/services/ecommerce" },
       { name: "Custom Business Software", color: "from-indigo-100 to-blue-200",link:"/services/custom-software" },
       { name: "Business Dashboard", color: "from-violet-100 to-purple-200",link:"/services/dashboard" },
        {name:"Vfx and Motion Graphics",color:"from-amber-100 to-yellow-200",link:"/services/vfx"},
-      {name:"Video Editing Services",color:"from-rose-100 to-pink-200",link:"/services/video-editing"}
+     
     ].map((service, i) => (
-      <Link to={service.link} key={i} >
+      <Link to={service.link} key={i} style={{ textDecoration: 'none' }}>
       <motion.div
         key={i}
         variants={{
@@ -362,13 +370,13 @@ helping your business stand out online and turn visitors into customers.
       >
         {service.name}
 
-         <motion.div
+  <motion.div
   whileHover={{ x: 6 }}
   transition={{ type: "spring", stiffness: 300 }}
   className="mt-6 text-center"
 >
   <h3
-   
+    
     className="inline-flex items-center gap-2
     text-[#ff5252] font-extrabold text-[15px]
     hover:text-[#22FF88] transition-colors"
@@ -377,7 +385,9 @@ helping your business stand out online and turn visitors into customers.
     <span className="text-lg">→</span>
   </h3>
 </motion.div>
+
       </motion.div>
+
       </Link>
     ))}
   </motion.div>
@@ -389,15 +399,15 @@ helping your business stand out online and turn visitors into customers.
       ====================================================== */}
       <section className="py-32 bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6] text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-          Ready to Build Your Business Website?
+        Ready to Create Professional Videos?
         </h2>
 
         <p className="text-white/90 text-lg mb-10">
-      Get a professional, SEO optimized and high converting website
-designed to grow your business and generate leads.
+  Let’s create high-quality videos that attract audience
+and grow your brand.
         </p>
 
-      <button  onClick={handleWhatsApp}
+      <button onClick={handleWhatsApp}
   className="px-10 sm:px-14 py-4 sm:py-5 rounded-full bg-white
   font-extrabold text-base sm:text-lg shadow-xl hover:scale-110 transition"
 >
