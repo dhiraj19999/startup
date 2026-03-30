@@ -132,14 +132,14 @@ content="Business websites, mobile apps, AI automation and digital solutions acr
             >
               <ul className="flex flex-col items-center gap-6 py-6 font-semibold text-[#0F172A]">
                 {links.map((link) => (
-                  <li key={link.id}>
-                    <a
-                      href={`#${link.id}`}
-                      onClick={() => setOpen(false)}
-                    >
-                      {link.name}
-                    </a>
-                  </li>
+                  <li key={link.id} className="relative group">
+                <Link onClick={()=>setOpen(false)}  className="transition-colors duration-200 hover:text-[#518f69]" to={`/#${link.id}`}>{link.name}</Link>
+                <span
+                  className="absolute left-0 -bottom-2 h-[3px] w-0
+                  bg-white rounded-full transition-all duration-300
+                  group-hover:w-full "
+                />
+              </li>
                 ))}
 
                 <button

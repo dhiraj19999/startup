@@ -81,13 +81,13 @@ and scale your business faster.
         </p>
 
         {/* ================= GRID ================= */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-5 2xl:gap-6"
-        >
+       <motion.div
+  variants={container}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6"
+>
           {[
             {
               title: "Business Website Development",
@@ -211,14 +211,17 @@ and scale your business faster.
               key={i}
               variants={card}
               whileHover={{ y: -10 }}
-              className={`px-14 py-8 rounded-3xl bg-gradient-to-br ${service.bg}
-              shadow-xl hover:shadow-2xl transition-all duration-300`}
+              className={`
+px-6 sm:px-8 lg:px-14 py-8
+rounded-3xl bg-gradient-to-br ${service.bg}
+shadow-xl hover:shadow-2xl transition-all duration-300
+`}
             >
               <img
-                src={service.img}
-                alt={service.title}
-                className="h-36 mx-auto mb-6"
-              />
+  src={service.img}
+  alt={service.title}
+  className="h-28 sm:h-32 md:h-36 mx-auto mb-6"
+/>
 
               <h3 className="text-[26px] font-extrabold tracking-tight text-center mb-3">
                 {service.title}
