@@ -4,7 +4,12 @@ import app from "./src/app.js";
 import cors from "cors";
 
 app.use(cors({
-  origin: "*", // Allow all origins (you can specify your frontend URL here)
+ origin: [
+    "http://localhost:5173",
+    "https://smartwebai.in",
+    "https://www.smartwebai.in",
+    "https://smartwebai-frontend.onrender.com"
+  ]// Allow all origins (you can specify your frontend URL here)
 }));
 
 dotenv.config();
