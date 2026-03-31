@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 
 dotenv.config();
+
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 587,
@@ -12,8 +13,10 @@ const transporter = nodemailer.createTransport({
   },
   tls: {
     rejectUnauthorized: false
-  }
+  },
+  family: 4   // ⭐ important fix
 });
+
 export const sendEmails = async (data) => {
   const receivers = process.env.EMAIL_RECEIVERS.split(",");
   
