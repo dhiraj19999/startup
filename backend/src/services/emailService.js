@@ -12,8 +12,7 @@ const transporter = nodemailer.createTransport({
 
 export const sendEmails = async (data) => {
   const receivers = process.env.EMAIL_RECEIVERS.split(",");
-  console.log('EMAIL_USER:', process.env.EMAIL_USER );
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS );
+  
 
   const html = `
     <h2>New  Client Contact Message from SmartwebAI</h2>
