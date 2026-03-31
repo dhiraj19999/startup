@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import vfx from "../../assets/Vfx.png";
+import vfx from "../../assets/vfx.png";
 import { FaPython } from "react-icons/fa";
 import Vfxtechstack from "../../components/VfxStack";
 import { Helmet } from "react-helmet-async";
