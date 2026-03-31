@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import about from "../assets/about.webp"
 import commitment from "../assets/commitment.webp"
 import transparency from "../assets/transperncy.webp"
-import innovation from "../assets/inovation.webp"
+import innovation from "../assets/Inovation.webp"
 import quality from "../assets/quality.webp"
 import { Helmet } from "react-helmet-async";
 /* ================= PNGs ================= */
