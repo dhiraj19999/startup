@@ -114,6 +114,7 @@ tech:["After Effects","Blender","Nuke"]
 }
           ].map((project,i)=>(
           <motion.div
+          key={i}
 whileHover={{ y:-12 }}
 initial={{opacity:0,y:40}}
 whileInView={{opacity:1,y:0}}
