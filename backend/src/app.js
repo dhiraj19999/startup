@@ -4,7 +4,7 @@ import contactRoutes from "./routes/contactRoutes.js";
 
 const app = express();
 
-pp.use(cors({
+app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://smartwebai.in",
