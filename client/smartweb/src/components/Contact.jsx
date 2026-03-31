@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
+import emailjs from "@emailjs/browser";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -26,39 +27,46 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  e.preventDefault();
+  setLoading(true);
 
-    const toastId = toast.loading("Sending message...", {
+  const toastId = toast.loading("Sending message...", {
     style: {
       background: "#0F172A",
       color: "#fff",
     },
   });
 
-    try {
-      const res = await fetch("https://startup-8adv.onrender.com/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+  try {
 
-      const data = await res.json();
 
-       if (data.success) {
-      toast.success("Message sent successfully! Our team will contact you shortly 🚀", {
-        id: toastId,
-        duration: 4000, // ⏱ success time
-        style: {
-          background: "#22c55e", // 🟢 green
-          color: "#fff",
-          fontWeight: "600",
-        },
-        iconTheme: {
-          primary: "#fff",
-          secondary: "#22c55e",
-        },
-      });
+const apiRes=await fetch("https://smartwebai-backend.onrender.com/api/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    body: JSON.stringify(form),
+  },
+});
+
+
+
+    const result = await emailjs.send(
+      "service_efqke0p", // service id
+      "template_cjun0zq", // template id
+      {
+        fullName: form.fullName,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
+      },
+      "wjLJKMc9ui9-Tcnk8" // public key
+    );
+
+    if (result.status === 200) {
+      toast.success(
+        "Message sent successfully! Our team will contact you shortly 🚀",
+        { id: toastId }
+      );
 
       setForm({
         fullName: "",
@@ -66,28 +74,13 @@ export default function Contact() {
         phone: "",
         message: "",
       });
-    } else {
-      toast.error("Failed to send message ❌", {
-        id: toastId,
-        duration: 5000, // ⏱ error time
-        style: {
-          background: "#ef4444", // 🔴 red
-          color: "#fff",
-          fontWeight: "600",
-        },
-        iconTheme: {
-          primary: "#fff",
-          secondary: "#ef4444",
-        },
-      });
     }
-    } catch (err) {
-      toast.error("Something went wrong. Try again later ⚠️", { id: toastId });
-    }
+  } catch (error) {
+    toast.error("Failed to send message ❌", { id: toastId });
+  }
 
-    setLoading(false);
-  };
-
+  setLoading(false);
+};
   return (
     <section className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#020617] to-black flex items-center justify-center px-4 py-20">
      

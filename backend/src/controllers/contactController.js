@@ -29,7 +29,7 @@ export const sendContact = async (req, res) => {
 
 
     // send notifications
-   await sendEmails(req.body);
+  // await sendEmails(req.body);
   
 
     res.json({ success: true, message: "Message sent successfully" });

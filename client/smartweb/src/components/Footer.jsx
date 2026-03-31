@@ -11,7 +11,7 @@ Please share details.`
 )}`;
 
 const gmailLink =
-"https://mail.google.com/mail/?view=cm&fs=1&to=smartwebai99@gmail.com&su=Project%20Inquiry&body=Hi%20SmartWeb%20AI,%0A%0AI%20am%20interested%20in%20your%20services.";
+"https://mail.google.com/mail/?view=cm&fs=1&to=info@smartwebai.in&su=Project%20Inquiry&body=Hi%20SmartWeb%20AI,%0A%0AI%20am%20interested%20in%20your%20services.";
 return (
 <footer className="bg-gradient-to-br from-[#F0FFF9] to-[#ECFEFF] pt-20 pb-10">
 <Helmet>
@@ -77,7 +77,7 @@ className="hover:text-[#22FF88]"
 </a>
 
 <a
-href="https://linkedin.com/company/smartwebai"
+href="https://linkedin.com/company/smartweb-ai"
 target="_blank"
 className="hover:text-[#22FF88]"
 >
@@ -143,7 +143,7 @@ Contact
 <div className="space-y-3 text-gray-600">
 <p>📍 Latur, Maharashtra, India</p>
 <p>📞 +91 8459116231</p>
-<p>✉ smartwebai99@gmail.com</p>
+<p>✉ info@smartwebai.in</p>
 </div>
 
 <a
