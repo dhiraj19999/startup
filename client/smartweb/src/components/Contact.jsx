@@ -40,13 +40,6 @@ export default function Contact() {
   try {
 
 
-const apiRes=await fetch("https://smartwebai-backend.onrender.com/api/contact", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    body: JSON.stringify(form),
-  },
-});
 
 
 
