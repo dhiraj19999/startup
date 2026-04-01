@@ -81,11 +81,11 @@ and scale your business faster.
         </p>
 
         {/* ================= GRID ================= */}
-       <motion.div
+     <motion.div
   variants={container}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: true, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6"
 >
           {[
