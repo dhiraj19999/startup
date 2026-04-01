@@ -78,7 +78,7 @@ content="Business websites, mobile apps, AI automation and digital solutions acr
         bg-gradient-to-r from-[#22FF88] via-[#00E5CC] to-[#3B82F6]
         ${scrolled ? "py-3 shadow-2xl" : "py-4"}`}
       >
-        <div className="w-full px-6 lg:px-16 flex items-center justify-between">
+        <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 flex items-center justify-between">
 
           {/* LOGO */}
           <h1 className="text-2xl font-extrabold text-white">
@@ -89,7 +89,7 @@ content="Business websites, mobile apps, AI automation and digital solutions acr
           </h1>
 
           {/* DESKTOP LINKS */}
-          <ul className="hidden md:flex gap-10 text-white font-semibold">
+          <ul className="hidden md:flex gap-4 lg:gap-8 xl:gap-10 text-white font-semibold">
             {links.map((link) => (
               <li key={link.id} className="relative group">
                 <Link  className="transition-colors duration-200 hover:text-[#518f69]" to={`/#${link.id}`}>{link.name}</Link>
@@ -105,7 +105,7 @@ content="Business websites, mobile apps, AI automation and digital solutions acr
           {/* CTA Desktop */}
           <motion.button
             onClick={handleQuote}
-            className="hidden md:block px-7 py-2.5 rounded-full
+            className="hidden md:block px-4 lg:px-6 py-2 text-sm lg:text-base rounded-full
             bg-white text-[#0F172A] font-bold
             hover:scale-110 transition"
           >
@@ -133,7 +133,7 @@ content="Business websites, mobile apps, AI automation and digital solutions acr
               <ul className="flex flex-col items-center gap-6 py-6 font-semibold text-[#0F172A]">
                 {links.map((link) => (
                   <li key={link.id} className="relative group">
-                <Link onClick={()=>setOpen(false)}  className="transition-colors duration-200 hover:text-[#518f69]" to={`/#${link.id}`}>{link.name}</Link>
+                <Link onClick={()=>setOpen(false)}  className=" whitespace-nowrap  transition-colors duration-200 hover:text-[#518f69]" to={`/#${link.id}`}>{link.name}</Link>
                 <span
                   className="absolute left-0 -bottom-2 h-[3px] w-0
                   bg-white rounded-full transition-all duration-300

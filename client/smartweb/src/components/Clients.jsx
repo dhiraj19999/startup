@@ -207,7 +207,7 @@ content="Trusted by startups and businesses across India. See testimonials and s
       <section className="py-24 bg-gradient-to-r from-[#22FF88] to-[#00E5CC] text-white">
         <div className="grid md:grid-cols-4 text-center gap-10">
           <div>
-            <h3 className="text-4xl font-bold">50+</h3>
+            <h3 className="text-4xl font-bold">40+</h3>
             <p>Projects Completed</p>
           </div>
 

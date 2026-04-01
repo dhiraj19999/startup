@@ -62,9 +62,9 @@ content="We build websites, mobile apps and AI automation solutions for business
 
 
       {/* ================= HERO ================= */}
-     <section className="w-full min-h-[85vh] pt-24 md:pt-32 bg-gradient-to-br from-[#E6FFF5] via-[#ECFEFF] to-[#EEF2FF]">
+     <section className="w-full pt-20 pb-10 md:pt-28 md:pb-14 bg-gradient-to-br from-[#E6FFF5] via-[#ECFEFF] to-[#EEF2FF]">
   <div className="px-6 md:px-12 lg:px-28 max-w-7xl mx-auto 
-  grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+  grid md:grid-cols-2 gap-10 md:gap-16 items-start md:items-center">
 
     <motion.div
       initial="hidden"

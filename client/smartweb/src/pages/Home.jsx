@@ -94,8 +94,8 @@ content="website developer Pune, website developer Latur,Mobile app developement
 </Helmet>
 
       {/* ================= HERO ================= */}
-      <section id="home" className="w-full min-h-screen pt-32 bg-gradient-to-br from-[#E6FFF5] via-[#ECFEFF] to-[#EEF2FF]">
-        <div className="w-full px-6 md:px-12 lg:px-28 grid md:grid-cols-2 gap-16 items-center">
+      <section id="home" className="w-full pt-24 pb-12 md:pt-32 md:pb-16  bg-gradient-to-br from-[#E6FFF5] via-[#ECFEFF] to-[#EEF2FF]">
+        <div className="w-full px-6 md:px-12 lg:px-28 grid md:grid-cols-2 gap-16 items-start md:items-center">
 
           <motion.div
             variants={fadeUp}

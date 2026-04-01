@@ -86,7 +86,7 @@ and scale your business faster.
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true, amount: 0.2 }}
-  className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6"
+  className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6"
 >
           {[
             {
@@ -212,7 +212,7 @@ and scale your business faster.
               variants={card}
               whileHover={{ y: -10 }}
               className={`
-px-6 sm:px-8 lg:px-14 py-8
+px-4 sm:px-6 lg:px-10 py-6
 rounded-3xl bg-gradient-to-br ${service.bg}
 shadow-xl hover:shadow-2xl transition-all duration-300
 `}
@@ -220,7 +220,7 @@ shadow-xl hover:shadow-2xl transition-all duration-300
               <img
   src={service.img}
   alt={service.title}
-  className="h-28 sm:h-32 md:h-36 mx-auto mb-6"
+  className="h-28 sm:h-28 md:h-32 mx-auto mb-4"
 />
 
               <h3 className="text-[26px] font-extrabold tracking-tight text-center mb-3">

@@ -75,7 +75,7 @@ export default function Contact() {
   setLoading(false);
 };
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#020617] to-black flex items-center justify-center px-4 py-20">
+    <section className="w-full py-16 md:py-24 bg-gradient-to-br from-[#0F172A] via-[#020617] to-black flex items-center justify-center px-4 ">
      
      <Helmet>
 <title>
