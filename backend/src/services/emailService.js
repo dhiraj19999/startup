@@ -45,6 +45,7 @@ export const sendEmails = async (data) => {
       from:  process.env.EMAIL_USER, // verified domain or Resend address
       to: mail.trim(),
       subject: "New Contact Message",
+      
       html: `
         <h2>New Client Contact Message from SmartwebAI</h2>
         <p><b>Name:</b> ${data.fullName}</p>
