@@ -101,6 +101,8 @@ content="We build websites, mobile apps and AI automation solutions for business
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 200 }}
       className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto"
+       loading="lazy"
+  decoding="async"
     />
   </div>
 </section>

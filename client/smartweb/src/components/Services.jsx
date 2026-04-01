@@ -221,6 +221,8 @@ shadow-xl hover:shadow-2xl transition-all duration-300
   src={service.img}
   alt={service.title}
   className="h-28 sm:h-28 md:h-32 mx-auto mb-4"
+   loading="lazy"
+  decoding="async"
 />
 
               <h3 className="text-[26px] font-extrabold tracking-tight text-center mb-3">

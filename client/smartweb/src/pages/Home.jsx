@@ -176,6 +176,9 @@ content="website developer Pune, website developer Latur,Mobile app developement
             transition={{ duration: 0.9 }}
             whileHover={{ scale: 1.04, rotate: 1 }}
             className="w-full max-w-md md:max-w-lg mx-auto"
+           loading="eager"
+  fetchPriority="high"
+
           />
         </div>
       </section>
