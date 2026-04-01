@@ -14,7 +14,7 @@ const webImg = "https://illustrations.popsy.co/white/web-design.svg";
 const appImg = "https://illustrations.popsy.co/white/mobile-app.svg";
 const aiImg = "https://illustrations.popsy.co/white/artificial-intelligence.svg";
 
-/* Animation presets */
+/* Animation presets  new */
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
