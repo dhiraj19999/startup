@@ -126,7 +126,7 @@ content="Get in touch with SmartWeb AI for websites, mobile apps, AI automation,
           <div className="space-y-3 text-sm text-white/70">
             <p>📍 India</p>
             <p>📞 +91 8459116231</p>
-            <p>✉️ smartwebai99@gmail.com</p>
+            <p>✉️ info@smartwebai.in</p>
           </div>
         </div>
 
