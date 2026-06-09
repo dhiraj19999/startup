@@ -145,7 +145,10 @@ content="Get in touch with SmartWeb AI for websites, mobile apps, AI automation,
               className="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-[#22FF88]"
               required
             />
+                  
 
+                                                         
+                                          
             <input
               name="email"
               type="email"
